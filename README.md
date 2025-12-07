@@ -1,65 +1,73 @@
-# Welcome to your Project
+# Naufal HD - Portfolio
 
-## Project info
+A modern, responsive portfolio website showcasing backend & AI engineering projects.
 
-**URL**: https://your-project-url.com
+## 🚀 Tech Stack
 
-## How can I edit this code?
+- **Frontend**: React + TypeScript + Vite
+- **Styling**: Tailwind CSS + shadcn/ui
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
 
-There are several ways of editing your application.
+## 🛠️ Getting Started
 
-**Use your preferred IDE**
+### Prerequisites
+- Node.js (v18 or higher)
+- npm or yarn
 
-If you want to work locally using your own IDE, you can clone this repo and push changes.
+### Installation
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1. Clone the repository
+```bash
+git clone https://github.com/NaufalHD12/naufal-portfolio.git
+cd naufal-portfolio
+```
 
-Follow these steps:
+2. Install dependencies
+```bash
+npm install
+```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Start development server
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. Open [http://localhost:5173](http://localhost:5173) in your browser
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📁 Project Structure
 
-**Use GitHub Codespaces**
+```
+src/
+├── components/
+│   ├── portfolio/          # Portfolio-specific components
+│   │   ├── AboutSection.tsx
+│   │   ├── HeroSection.tsx
+│   │   ├── Navbar.tsx
+│   │   ├── ProjectsSection.tsx
+│   │   └── SkillsSection.tsx
+│   └── ui/                 # Reusable UI components
+├── data/
+│   └── portfolio.ts        # Portfolio data & content
+├── hooks/                  # Custom React hooks
+├── lib/                    # Utility functions
+└── pages/                  # Page components
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🎨 Features
 
-## What technologies are used for this project?
+- **Responsive Design**: Optimized for all device sizes
+- **Dark Theme**: Modern dark color scheme
+- **Smooth Animations**: Framer Motion powered transitions
+- **Glass Morphism**: Modern glass effect UI elements
+- **SEO Optimized**: Proper meta tags and structure
+- **Fast Loading**: Vite-powered build system
 
-This project is built with:
+## 📱 Sections
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-You can deploy this project using standard deployment methods for your chosen platform.
-
-## Can I connect a custom domain to my project?
-
-Yes, you can!
-
-To connect a domain, follow your hosting provider's documentation for custom domain setup.
+- **Hero**: Introduction with animated text
+- **About**: Personal background & stats
+- **Skills**: Technical expertise showcase
+- **Projects**: Featured work gallery
+- **Experience**: Professional background
+- **Contact**: Get in touch information
