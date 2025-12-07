@@ -6,12 +6,17 @@ import { TbBrandCSharp } from "react-icons/tb";
 import { IconType } from "react-icons";
 
 // Project images
-import projectPredictiveMaintenance from "@/assets/project-predictive-maintenance.jpg";
-import projectEcoTracker from "@/assets/project-eco-tracker.jpg";
-import projectPersonaNexus from "@/assets/project-persona-nexus.jpg";
-import projectVentureMind from "@/assets/project-venture-mind.jpg";
-import projectSynapsisAi from "@/assets/project-synapsis-ai.jpg";
-import projectAcnescan from "@/assets/project-acnescan.jpg";
+import projectPredictiveMaintenance from "@/assets/project-predictive-maintenance.png";
+import projectEcoTracker from "@/assets/project-eco-tracker.png";
+import projectPersonaNexus from "@/assets/project-persona-nexus.png";
+import projectVentureMind from "@/assets/project-venture-mind.png";
+import projectSynapsisAi from "@/assets/project-synapsis-ai.png";
+import projectAcnescan from "@/assets/project-acnescan.png";
+import projectTweetsSentiment from "@/assets/project-tweets-sentiment-analysis.png";
+import projectAnimeRecommendation from "@/assets/project-anime-recommendation-system.png";
+import projectStudentPerformance from "@/assets/project-student-performance-predictor.png";
+import projectEcommerceDashboard from "@/assets/project-ecommerce-public-dashboard.png";
+import projectBikeSharing from "@/assets/project-bike-sharing-dashboard.png";
 
 export interface Skill {
   name: string;
@@ -107,7 +112,6 @@ export const PROJECTS: Project[] = [
     highlights: ["RESTful API", "Caching & Rate Limiting", "RBAC Security"],
     image: projectEcoTracker,
     github: "https://github.com/NaufalHD12/eco-tracker",
-    demo: "https://eco-tracker-demo.com",
   },
   {
     slug: "persona-nexus",
@@ -165,12 +169,93 @@ export const PROJECTS: Project[] = [
     image: projectAcnescan,
     github: "https://github.com/Acne-Scan",
   },
+  {
+    slug: "tweets-sentiment-analysis",
+    title: "Tweets Sentiment Analysis",
+    summary: "Developed an end-to-end ML pipeline using TFX for sentiment analysis of tweets, achieving high accuracy in binary classification.",
+    description: [
+      "Built a comprehensive machine learning pipeline using TensorFlow Extended (TFX) components for automated data processing, validation, and model training.",
+      "Implemented data ingestion with CsvExampleGen, statistics generation with StatisticsGen, and schema inference with SchemaGen for robust data handling.",
+      "Created anomaly detection using ExampleValidator and data transformation with Transform component for feature engineering and preprocessing.",
+      "Developed a binary classification model using TensorFlow/Keras with text vectorization, embedding layers, and convolutional networks for sentiment analysis.",
+      "Achieved 89% binary accuracy and 0.94 AUC score, with systematic evaluation using TFX Evaluator component and threshold-based model validation.",
+    ],
+    techStack: ["Python", "TensorFlow", "TFX", "Keras", "TF Data Validation"],
+    highlights: ["End-to-End ML Pipeline", "TFX Components", "High Accuracy Model"],
+    image: projectTweetsSentiment,
+    github: "https://github.com/NaufalHD12/tweets-sentiment-analysis",
+  },
+  {
+    slug: "anime-recommendation-system",
+    title: "Anime Recommendation System",
+    summary: "Built a hybrid recommendation engine combining content-based and collaborative filtering for personalized anime suggestions.",
+    description: [
+      "Developed a robust recommendation system model using Content-Based and Collaborative Filtering techniques to help users discover new anime.",
+      "Implemented content-based filtering by analyzing anime metadata (genres, themes, demographics) to find similar content.",
+      "Applied collaborative filtering using user ratings and preferences to identify patterns and make personalized recommendations.",
+      "Combined both approaches in a hybrid system to overcome limitations of individual methods and improve recommendation accuracy.",
+      "Achieved high precision and low prediction error through extensive model evaluation and optimization.",
+    ],
+    techStack: ["Python", "TensorFlow", "Scikit-learn", "Pandas", "NumPy"],
+    highlights: ["Hybrid Recommendation", "Content & Collaborative Filtering", "High Accuracy"],
+    image: projectAnimeRecommendation,
+    github: "https://github.com/NaufalHD12/anime-recommendation-system",
+  },
+  {
+    slug: "student-performance-predictor",
+    title: "Student Performance Predictor",
+    summary: "Created a machine learning model using CatBoost to predict student academic performance based on comprehensive feature analysis.",
+    description: [
+      "Conducted extensive exploratory data analysis on the UCI Student Performance dataset, examining correlations between demographic, behavioral, and academic factors.",
+      "Performed comprehensive feature engineering, including encoding categorical variables and standardizing numerical features for optimal model performance.",
+      "Implemented and compared multiple regression algorithms including Linear Regression, KNN, Random Forest, XGBoost, and CatBoost.",
+      "Selected CatBoost as the final model due to its superior performance, achieving high R² scores and low error metrics on the test set.",
+      "Identified key predictors of academic success, including parental education, study time, and past academic performance.",
+    ],
+    techStack: ["Python", "CatBoost", "Scikit-learn", "Pandas", "Matplotlib"],
+    highlights: ["Comprehensive EDA", "Multiple ML Algorithms", "High Prediction Accuracy"],
+    image: projectStudentPerformance,
+    github: "https://github.com/NaufalHD12/student-performance-predictor",
+  },
+  {
+    slug: "ecommerce-public-dashboard",
+    title: "Ecommerce Public Dashboard",
+    summary: "Developed an interactive Streamlit dashboard for ecommerce analytics with comprehensive data visualization and business insights.",
+    description: [
+      "Built a comprehensive ecommerce analytics dashboard using Streamlit for interactive data exploration and visualization.",
+      "Implemented data processing pipelines to handle large datasets and perform real-time calculations for key business metrics.",
+      "Created multiple visualization types including charts, graphs, and KPI cards to display sales trends, customer behavior, and product performance.",
+      "Added filtering and drill-down capabilities to allow users to explore data at different granularities (daily, weekly, monthly).",
+      "Deployed the dashboard on Streamlit Cloud for public access and easy sharing with stakeholders.",
+    ],
+    techStack: ["Python", "Streamlit", "Pandas", "Plotly", "NumPy"],
+    highlights: ["Interactive Dashboard", "Real-time Analytics", "Public Deployment"],
+    image: projectEcommerceDashboard,
+    github: "https://github.com/NaufalHD12/ecommerce-public-dashboard",
+    demo: "https://submission-ecommerce-public-dtwvbgakmi3wdkutzwun8p.streamlit.app/",
+  },
+  {
+    slug: "bike-sharing-dashboard",
+    title: "Bike Sharing Dashboard",
+    summary: "Created a comprehensive data analysis dashboard for bike sharing systems with predictive analytics and usage insights.",
+    description: [
+      "Developed a complete data analysis solution for bike sharing systems using Python and Streamlit for the dashboard interface.",
+      "Implemented data preprocessing and cleaning pipelines to handle raw bike sharing data including weather conditions, seasonality, and usage patterns.",
+      "Created interactive visualizations showing usage patterns, peak hours, popular stations, and seasonal trends.",
+      "Deployed the dashboard on Streamlit Cloud for easy access and real-time data exploration.",
+    ],
+    techStack: ["Python", "Streamlit", "Scikit-learn", "Pandas", "Plotly"],
+    highlights: ["Predictive Analytics", "Usage Pattern Analysis", "Interactive Visualizations"],
+    image: projectBikeSharing,
+    github: "https://github.com/NaufalHD12/bike-sharing-dashboard",
+    demo: "https://bikesharinganalysisfal.streamlit.app/",
+  },
 ];
 
 export const TIMELINE: TimelineItem[] = [
   {
     title: "React & Backend with AI",
-    subtitle: "Asah by Dicoding & Accenture",
+    subtitle: "Asah led by Dicoding Association with Accenture",
     date: "Aug 2025 - Present",
     description: "Advanced program focused on full-stack development with React, backend technologies, and AI integration."
   },
@@ -190,13 +275,13 @@ export const TIMELINE: TimelineItem[] = [
     title: "Machine Learning",
     subtitle: "Bangkit Academy 2024",
     date: "Sep 2024 – Jan 2025",
-    description: "Intensive program led by Google, GoTo & Traveloka, focusing on ML concepts and TensorFlow."
+    description: "Intensive program led by Google, GoTo, and Traveloka, focusing on ML concepts."
   },
   {
     title: "Software Engineering Student",
     subtitle: "Universitas Pendidikan Indonesia",
     date: "2022 - Present",
-    description: "Bachelor's degree with GPA 3.81, focusing on Backend & AI Engineering."
+    description: "Bachelor's degree focusing on Backend & AI Engineering."
   },
 ];
 

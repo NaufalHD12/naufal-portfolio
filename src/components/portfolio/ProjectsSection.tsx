@@ -12,7 +12,7 @@ export const ProjectsSection = () => {
     <section id="projects" className="section-padding relative" ref={ref}>
       {/* Background decoration */}
       <div className="absolute right-0 top-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl" />
-      
+
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           <motion.div
@@ -21,12 +21,15 @@ export const ProjectsSection = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <span className="text-primary font-semibold mb-4 block">Featured Work</span>
+            <span className="text-primary font-semibold mb-4 block">
+              Featured Work
+            </span>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               Selected <span className="text-gradient">Projects</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              From AI-powered platforms to full-stack applications, here are some projects I'm proud of.
+              From AI-powered platforms to full-stack applications, here are
+              some projects I'm proud of.
             </p>
           </motion.div>
 
@@ -42,13 +45,13 @@ export const ProjectsSection = () => {
                 <Link to={`/project/${project.slug}`} className="block">
                   {/* Project Image */}
                   <div className="relative h-48 overflow-hidden">
-                    <img 
-                      src={project.image} 
+                    <img
+                      src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
-                    <motion.div 
+                    <motion.div
                       className="absolute top-4 right-4 p-2 bg-background/80 backdrop-blur-sm rounded-lg group-hover:bg-primary/20 transition-colors"
                       whileHover={{ rotate: 45 }}
                     >
@@ -65,17 +68,17 @@ export const ProjectsSection = () => {
                       {project.summary}
                     </p>
 
-                  {/* Highlights */}
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.highlights.map((highlight) => (
-                      <span
-                        key={highlight}
-                        className="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full"
-                      >
-                        {highlight}
-                      </span>
-                    ))}
-                  </div>
+                    {/* Highlights */}
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.highlights.map((highlight) => (
+                        <span
+                          key={highlight}
+                          className="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full"
+                        >
+                          {highlight}
+                        </span>
+                      ))}
+                    </div>
 
                     {/* Tech Stack */}
                     <div className="flex flex-wrap gap-2 mb-4">
@@ -139,7 +142,7 @@ export const ProjectsSection = () => {
               whileHover={{ scale: 1.05 }}
             >
               <Github size={20} />
-              View All Projects on GitHub
+              Check out my GitHub
             </motion.a>
           </motion.div>
         </div>

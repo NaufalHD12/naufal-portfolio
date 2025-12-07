@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom";
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { PROJECTS } from "@/data/portfolio";
 import { ArrowLeft, Github, ExternalLink, CheckCircle2 } from "lucide-react";
@@ -8,6 +9,11 @@ import { Footer } from "@/components/portfolio/Footer";
 const ProjectDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const project = PROJECTS.find((p) => p.slug === slug);
+
+  // Prevent scroll restoration that might cause scrolling to bottom
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   if (!project) {
     return (
@@ -51,10 +57,10 @@ const ProjectDetail = () => {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="relative rounded-2xl overflow-hidden mb-12"
             >
-              <img 
-                src={project.image} 
+              <img
+                src={project.image}
                 alt={project.title}
-                className="w-full h-64 md:h-80 object-cover"
+                className="w-full h-64 md:h-80 object-contain"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
             </motion.div>

@@ -18,8 +18,7 @@ export const Footer = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-          >
-            Designed & Developed with React + Tailwind
+          >Developed with React + Tailwind
           </motion.p>
         </div>
       </div>

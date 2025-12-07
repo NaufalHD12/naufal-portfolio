@@ -25,35 +25,49 @@ export const AboutSection = () => {
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.6 }}
             >
-              <span className="text-primary font-semibold mb-4 block">About Me</span>
+              <span className="text-primary font-semibold mb-4 block">
+                About Me
+              </span>
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Passionate About Building{" "}
                 <span className="text-gradient">Intelligent Systems</span>
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                I'm a Software Engineering student at Universitas Pendidikan Indonesia with a 3.81 GPA, 
-                specializing in Backend and AI Engineering. I love turning complex problems into elegant, 
-                scalable solutions.
+                Software Engineer specializing in backend & AI engineering.
+                Skilled in building scalable systems, AI-powered automation
+                tools, and full-stack web applications using Python, Node.js,
+                and ASP.NET.
               </p>
               <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-                With experience from internships at Pertamina and Home Credit, I've developed 
-                AI-powered automation systems and credit scoring models achieving 96% accuracy. 
-                I'm currently expanding my skills in full-stack development with React.
+                Experienced in deploying microservices, implementing DevOps
+                workflows, and integrating LLM-based agents into real-world
+                applications. Quick to learn and adapt, excelling both
+                independently and in team environments.
               </p>
-              
+
               <div className="flex flex-wrap gap-4">
-                <div className="glass px-6 py-3 rounded-xl">
-                  <span className="text-3xl font-bold text-gradient">3.81</span>
-                  <span className="text-muted-foreground ml-2">GPA</span>
-                </div>
-                <div className="glass px-6 py-3 rounded-xl">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  className="glass-hover px-6 py-3 rounded-xl group"
+                  whileHover={{ y: -5 }}
+                >
                   <span className="text-3xl font-bold text-gradient">11+</span>
                   <span className="text-muted-foreground ml-2">Projects</span>
-                </div>
-                <div className="glass px-6 py-3 rounded-xl">
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  className="glass-hover px-6 py-3 rounded-xl group"
+                  whileHover={{ y: -5 }}
+                >
                   <span className="text-3xl font-bold text-gradient">8+</span>
-                  <span className="text-muted-foreground ml-2">Certifications</span>
-                </div>
+                  <span className="text-muted-foreground ml-2">
+                    Certifications
+                  </span>
+                </motion.div>
               </div>
             </motion.div>
 
@@ -77,7 +91,9 @@ export const AboutSection = () => {
                     <item.icon className="w-6 h-6 text-primary" />
                   </div>
                   <h3 className="font-semibold mb-2">{item.label}</h3>
-                  <p className="text-sm text-muted-foreground">{item.description}</p>
+                  <p className="text-sm text-muted-foreground">
+                    {item.description}
+                  </p>
                 </motion.div>
               ))}
             </motion.div>

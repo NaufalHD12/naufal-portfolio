@@ -1,0 +1,27 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+        <feMerge>
+            <feMergeNode in="coloredBlur"/>
+            <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+        </filter>
+    </defs>
+    
+    <rect width="64" height="64" rx="12" fill="rgba(8, 12, 20, 0.5)"/>
+    
+    <text
+        x="50%"
+        y="50%"
+        dy=".35em"
+        font-family="monospace"
+        font-size="42"
+        font-weight="bold"
+        fill="#00BF63"
+        text-anchor="middle"
+        filter="url(#glow)"
+    >
+        &lt;/&gt;
+    </text>
+</svg>

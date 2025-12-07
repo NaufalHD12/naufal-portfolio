@@ -8,9 +8,9 @@ export const HeroSection = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img 
-          src={heroBg} 
-          alt="Abstract tech background" 
+        <img
+          src={heroBg}
+          alt="Abstract tech background"
           className="w-full h-full object-cover opacity-40"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
@@ -19,15 +19,18 @@ export const HeroSection = () => {
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 -left-20 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-1/4 -right-20 w-80 h-80 bg-cyan-500/15 rounded-full blur-3xl animate-float" style={{ animationDelay: "2s" }} />
-        
+        <div
+          className="absolute bottom-1/4 -right-20 w-80 h-80 bg-cyan-500/15 rounded-full blur-3xl animate-float"
+          style={{ animationDelay: "2s" }}
+        />
+
         {/* Grid Pattern */}
-        <div 
+        <div
           className="absolute inset-0 opacity-[0.03]"
           style={{
             backgroundImage: `linear-gradient(to right, hsl(var(--foreground)) 1px, transparent 1px),
                              linear-gradient(to bottom, hsl(var(--foreground)) 1px, transparent 1px)`,
-            backgroundSize: "60px 60px"
+            backgroundSize: "60px 60px",
           }}
         />
       </div>
@@ -52,9 +55,17 @@ export const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight"
           >
-            Hi, I'm{" "}
-            <span className="text-gradient">Naufal</span>
+            Hi, I'm <span className="text-gradient">Naufal</span>
           </motion.h1>
+
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="text-2xl md:text-4xl lg:text-5xl font-semibold mb-4 text-primary"
+          >
+            Software Engineer
+          </motion.h2>
 
           <motion.p
             initial={{ opacity: 0, y: 30 }}
@@ -62,7 +73,7 @@ export const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed"
           >
-            Backend & AI Engineer crafting intelligent systems and scalable architectures that power the future.
+            Architecting the next generation of intelligent system.
           </motion.p>
 
           <motion.div
@@ -122,12 +133,15 @@ export const HeroSection = () => {
         className="absolute bottom-8 w-full flex justify-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: [0, 10, 0] }}
-        transition={{ 
+        transition={{
           opacity: { delay: 1 },
-          y: { duration: 2, repeat: Infinity, ease: "easeInOut" }
+          y: { duration: 2, repeat: Infinity, ease: "easeInOut" },
         }}
       >
-        <a href="#about" className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+        <a
+          href="#about"
+          className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+        >
           <span className="text-sm font-medium">Scroll to explore</span>
           <ArrowDown size={20} />
         </a>
