@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 import { PROJECTS } from "@/data/portfolio";
 import { ExternalLink, Github, ArrowUpRight } from "lucide-react";
 
@@ -38,24 +39,25 @@ export const ProjectsSection = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="glass-hover rounded-2xl overflow-hidden group"
               >
-                {/* Project Header */}
-                <div className="p-6 pb-4">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
-                        {project.title}
-                      </h3>
-                      <p className="text-muted-foreground text-sm leading-relaxed">
-                        {project.summary}
-                      </p>
+                <Link to={`/project/${project.slug}`} className="block">
+                  {/* Project Header */}
+                  <div className="p-6 pb-4">
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="flex-1">
+                        <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                          {project.title}
+                        </h3>
+                        <p className="text-muted-foreground text-sm leading-relaxed">
+                          {project.summary}
+                        </p>
+                      </div>
+                      <motion.div 
+                        className="ml-4 p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors"
+                        whileHover={{ rotate: 45 }}
+                      >
+                        <ArrowUpRight className="w-5 h-5 text-primary" />
+                      </motion.div>
                     </div>
-                    <motion.div 
-                      className="ml-4 p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors"
-                      whileHover={{ rotate: 45 }}
-                    >
-                      <ArrowUpRight className="w-5 h-5 text-primary" />
-                    </motion.div>
-                  </div>
 
                   {/* Highlights */}
                   <div className="flex flex-wrap gap-2 mb-4">
@@ -69,23 +71,24 @@ export const ProjectsSection = () => {
                     ))}
                   </div>
 
-                  {/* Tech Stack */}
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.techStack.slice(0, 5).map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-2 py-1 bg-secondary/50 text-secondary-foreground text-xs font-mono rounded"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                    {project.techStack.length > 5 && (
-                      <span className="px-2 py-1 text-muted-foreground text-xs">
-                        +{project.techStack.length - 5} more
-                      </span>
-                    )}
+                    {/* Tech Stack */}
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.techStack.slice(0, 5).map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-2 py-1 bg-secondary/50 text-secondary-foreground text-xs font-mono rounded"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                      {project.techStack.length > 5 && (
+                        <span className="px-2 py-1 text-muted-foreground text-xs">
+                          +{project.techStack.length - 5} more
+                        </span>
+                      )}
+                    </div>
                   </div>
-                </div>
+                </Link>
 
                 {/* Project Links */}
                 <div className="px-6 pb-6 pt-2 flex items-center gap-3 border-t border-border/50">
