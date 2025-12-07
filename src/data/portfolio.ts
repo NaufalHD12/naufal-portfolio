@@ -5,6 +5,14 @@ import {
 import { TbBrandCSharp } from "react-icons/tb";
 import { IconType } from "react-icons";
 
+// Project images
+import projectPredictiveMaintenance from "@/assets/project-predictive-maintenance.jpg";
+import projectEcoTracker from "@/assets/project-eco-tracker.jpg";
+import projectPersonaNexus from "@/assets/project-persona-nexus.jpg";
+import projectVentureMind from "@/assets/project-venture-mind.jpg";
+import projectSynapsisAi from "@/assets/project-synapsis-ai.jpg";
+import projectAcnescan from "@/assets/project-acnescan.jpg";
+
 export interface Skill {
   name: string;
   icon: IconType;
@@ -17,7 +25,7 @@ export interface Project {
   description: string[];
   techStack: string[];
   highlights: string[];
-  image?: string;
+  image: string;
   github: string;
   demo?: string;
 }
@@ -83,6 +91,7 @@ export const PROJECTS: Project[] = [
     ],
     techStack: ["Hapi", "NodeJS", "FastAPI", "LangChain", "LangGraph", "Socket.IO", "TimescaleDB"],
     highlights: ["Microservices architecture", "Agentic AI", "Real-time streaming"],
+    image: projectPredictiveMaintenance,
     github: "https://github.com/NaufalHD12/predictive-maintenance-copilot",
   },
   {
@@ -96,6 +105,7 @@ export const PROJECTS: Project[] = [
     ],
     techStack: ["Node.js", "Express", "MongoDB", "Redis", "JWT"],
     highlights: ["RESTful API", "Caching & Rate Limiting", "RBAC Security"],
+    image: projectEcoTracker,
     github: "https://github.com/NaufalHD12/eco-tracker",
     demo: "https://eco-tracker-demo.com",
   },
@@ -110,6 +120,7 @@ export const PROJECTS: Project[] = [
     ],
     techStack: ["Django", "HTMX", "Alpine.js", "OAuth", "Chart.js", "AWS EC2", "Docker"],
     highlights: ["Full-Stack Development", "AI Integration", "DevOps Pipeline"],
+    image: projectPersonaNexus,
     github: "https://github.com/NaufalHD12/PersonaNexus",
     demo: "https://www.personanexus.club/",
   },
@@ -123,6 +134,7 @@ export const PROJECTS: Project[] = [
     ],
     techStack: ["CrewAI", "GPT-4.1-mini", "RAG", "FastAPI", "PostgreSQL", "Docker"],
     highlights: ["Multi-Agent AI", "RAG Integration", "Async Architecture"],
+    image: projectVentureMind,
     github: "https://github.com/NaufalHD12/venture-mind",
     demo: "https://venture-mind-production-531d.up.railway.app/",
   },
@@ -136,6 +148,7 @@ export const PROJECTS: Project[] = [
     ],
     techStack: ["Python", "Flask", "DeepSeek", "PyMuPDF", "Pandas"],
     highlights: ["AI Screening Pipeline", "Multi-Language", "Batch Processing"],
+    image: projectSynapsisAi,
     github: "https://github.com/NaufalHD12/synapsis-ai",
     demo: "https://synapsis-ai-production.up.railway.app/",
   },
@@ -149,6 +162,7 @@ export const PROJECTS: Project[] = [
     ],
     techStack: ["TensorFlow", "EfficientNetB0", "Flask", "GCP", "TensorFlow Lite"],
     highlights: ["CNN Model Training", "98% F1-Score", "Cloud Deployment"],
+    image: projectAcnescan,
     github: "https://github.com/Acne-Scan",
   },
 ];

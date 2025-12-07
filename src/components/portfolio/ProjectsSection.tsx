@@ -40,24 +40,30 @@ export const ProjectsSection = () => {
                 className="glass-hover rounded-2xl overflow-hidden group"
               >
                 <Link to={`/project/${project.slug}`} className="block">
+                  {/* Project Image */}
+                  <div className="relative h-48 overflow-hidden">
+                    <img 
+                      src={project.image} 
+                      alt={project.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+                    <motion.div 
+                      className="absolute top-4 right-4 p-2 bg-background/80 backdrop-blur-sm rounded-lg group-hover:bg-primary/20 transition-colors"
+                      whileHover={{ rotate: 45 }}
+                    >
+                      <ArrowUpRight className="w-5 h-5 text-primary" />
+                    </motion.div>
+                  </div>
+
                   {/* Project Header */}
                   <div className="p-6 pb-4">
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="flex-1">
-                        <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
-                          {project.title}
-                        </h3>
-                        <p className="text-muted-foreground text-sm leading-relaxed">
-                          {project.summary}
-                        </p>
-                      </div>
-                      <motion.div 
-                        className="ml-4 p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors"
-                        whileHover={{ rotate: 45 }}
-                      >
-                        <ArrowUpRight className="w-5 h-5 text-primary" />
-                      </motion.div>
-                    </div>
+                    <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                      {project.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                      {project.summary}
+                    </p>
 
                   {/* Highlights */}
                   <div className="flex flex-wrap gap-2 mb-4">

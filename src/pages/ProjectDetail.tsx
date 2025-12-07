@@ -44,11 +44,26 @@ const ProjectDetail = () => {
               </Link>
             </motion.div>
 
+            {/* Project Image */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="relative rounded-2xl overflow-hidden mb-12"
+            >
+              <img 
+                src={project.image} 
+                alt={project.title}
+                className="w-full h-64 md:h-80 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+            </motion.div>
+
             {/* Project Header */}
             <motion.header
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
               className="mb-12"
             >
               <h1 className="text-4xl md:text-5xl font-bold mb-4">{project.title}</h1>
@@ -61,7 +76,7 @@ const ProjectDetail = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
               className="flex flex-wrap gap-4 mb-12"
             >
               <a
@@ -90,7 +105,7 @@ const ProjectDetail = () => {
             <motion.section
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
               className="glass rounded-2xl p-6 md:p-8 mb-8"
             >
               <h2 className="text-2xl font-bold mb-6">Key Highlights</h2>
@@ -110,7 +125,7 @@ const ProjectDetail = () => {
             <motion.section
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
               className="glass rounded-2xl p-6 md:p-8 mb-8"
             >
               <h2 className="text-2xl font-bold mb-6">About This Project</h2>
@@ -130,7 +145,7 @@ const ProjectDetail = () => {
             <motion.section
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
               className="glass rounded-2xl p-6 md:p-8"
             >
               <h2 className="text-2xl font-bold mb-6">Tech Stack</h2>
