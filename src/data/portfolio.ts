@@ -88,21 +88,35 @@ export const PROJECTS: Project[] = [
   {
     slug: "predictive-maintenance-copilot",
     title: "Predictive Maintenance Copilot",
-    summary: "Architected a microservices-based predictive maintenance platform for manufacturing, integrating AI agents for real-time machine health analysis and alerts.",
+    summary:
+      "Architected a microservices-based predictive maintenance platform for manufacturing, integrating AI agents for real-time machine health analysis and alerts.",
     description: [
       "Architected and led the development of a predictive maintenance platform for the manufacturing sector, orchestrating a microservices ecosystem to monitor industrial machine health.",
       "Implemented real-time event streaming via Socket.IO to deliver critical machine failure alerts and synchronized updates across the dashboard.",
-      "Engineered an Agentic AI service using FastAPI, LangChain, and LangGraph to analyze telemetry data, providing engineers with real-time health summaries.",
+      "Engineered an Agentic AI service using FastAPI, LangChain, and LangGraph to analyze telemetry data, providing instant root-cause insights and maintenance recommendations.",
     ],
-    techStack: ["Hapi", "NodeJS", "FastAPI", "LangChain", "LangGraph", "Socket.IO", "TimescaleDB"],
-    highlights: ["Microservices architecture", "Agentic AI", "Real-time streaming"],
+    techStack: [
+      "Hapi",
+      "NodeJS",
+      "FastAPI",
+      "LangChain",
+      "LangGraph",
+      "Socket.IO",
+      "TimescaleDB",
+    ],
+    highlights: [
+      "Microservices architecture",
+      "Agentic AI",
+      "Real-time streaming",
+    ],
     image: projectPredictiveMaintenance,
     github: "https://github.com/NaufalHD12/predictive-maintenance-copilot",
   },
   {
     slug: "eco-tracker",
     title: "EcoTracker: Carbon Footprint App",
-    summary: "Built a scalable MERN-stack app with RESTful APIs, caching, and secure authentication for users to track and reduce their carbon footprints.",
+    summary:
+      "Built a scalable MERN-stack app with RESTful APIs, caching, and secure authentication for users to track and reduce their carbon footprints.",
     description: [
       "Architected a robust RESTful API with Node.js and Express, featuring comprehensive OpenAPI documentation.",
       "Optimized application performance by integrating Redis for efficient caching strategies.",
@@ -116,13 +130,22 @@ export const PROJECTS: Project[] = [
   {
     slug: "persona-nexus",
     title: "Persona Nexus: AI Community Platform",
-    summary: "Developed a full-stack community platform with AI moderation, real-time features, and DevOps pipeline for seamless social interactions.",
+    summary:
+      "Developed a full-stack community platform with AI moderation, real-time features, and DevOps pipeline for seamless social interactions.",
     description: [
       "Architected and developed the full-stack web application using Django, HTMX, and Alpine.js.",
       "Implemented comprehensive social features, including OAuth authentication and real-time notifications.",
       "Integrated AI functionality for content moderation and writing assistance.",
     ],
-    techStack: ["Django", "HTMX", "Alpine.js", "OAuth", "Chart.js", "AWS EC2", "Docker"],
+    techStack: [
+      "Django",
+      "HTMX",
+      "Alpine.js",
+      "OAuth",
+      "Chart.js",
+      "AWS EC2",
+      "Docker",
+    ],
     highlights: ["Full-Stack Development", "AI Integration", "DevOps Pipeline"],
     image: projectPersonaNexus,
     github: "https://github.com/NaufalHD12/PersonaNexus",
@@ -131,12 +154,20 @@ export const PROJECTS: Project[] = [
   {
     slug: "venture-mind",
     title: "VentureMind: AI Business Co-Pilot",
-    summary: "Created a multi-agent AI system for generating business strategies, with RAG integration and asynchronous processing.",
+    summary:
+      "Created a multi-agent AI system for generating business strategies, with RAG integration and asynchronous processing.",
     description: [
       "Designed a multi-agent AI system using CrewAI and GPT-4.1-mini for collaborative strategy generation.",
       "Integrated Retrieval-Augmented Generation with Tavily Search API for real-time market data.",
     ],
-    techStack: ["CrewAI", "GPT-4.1-mini", "RAG", "FastAPI", "PostgreSQL", "Docker"],
+    techStack: [
+      "CrewAI",
+      "GPT-4.1-mini",
+      "RAG",
+      "FastAPI",
+      "PostgreSQL",
+      "Docker",
+    ],
     highlights: ["Multi-Agent AI", "RAG Integration", "Async Architecture"],
     image: projectVentureMind,
     github: "https://github.com/NaufalHD12/venture-mind",
@@ -145,7 +176,8 @@ export const PROJECTS: Project[] = [
   {
     slug: "synapsis-ai",
     title: "Synapsis AI: CV Screening System",
-    summary: "Engineered an AI-driven recruitment tool for multi-language CV screening with batch processing.",
+    summary:
+      "Engineered an AI-driven recruitment tool for multi-language CV screening with batch processing.",
     description: [
       "Engineered an intelligent screening system to analyze job descriptions against CVs simultaneously.",
       "Developed a multi-language pipeline leveraging DeepSeek for matching scores and analysis.",
@@ -159,12 +191,19 @@ export const PROJECTS: Project[] = [
   {
     slug: "acnescan",
     title: "AcneScan: Acne Detection App",
-    summary: "Trained a CNN model for acne classification achieving 98% F1-score and deployed on GCP.",
+    summary:
+      "Trained a CNN model for acne classification achieving 98% F1-score and deployed on GCP.",
     description: [
       "Designed and trained a CNN image classification model using TensorFlow and EfficientNetB0.",
       "Built a RESTful API with Flask and deployed it on Google Cloud Platform.",
     ],
-    techStack: ["TensorFlow", "EfficientNetB0", "Flask", "GCP", "TensorFlow Lite"],
+    techStack: [
+      "TensorFlow",
+      "EfficientNetB0",
+      "Flask",
+      "GCP",
+      "TensorFlow Lite",
+    ],
     highlights: ["CNN Model Training", "98% F1-Score", "Cloud Deployment"],
     image: projectAcnescan,
     github: "https://github.com/Acne-Scan",
@@ -172,7 +211,8 @@ export const PROJECTS: Project[] = [
   {
     slug: "tweets-sentiment-analysis",
     title: "Tweets Sentiment Analysis",
-    summary: "Developed an end-to-end ML pipeline using TFX for sentiment analysis of tweets, achieving high accuracy in binary classification.",
+    summary:
+      "Developed an end-to-end ML pipeline using TFX for sentiment analysis of tweets, achieving high accuracy in binary classification.",
     description: [
       "Built a comprehensive machine learning pipeline using TensorFlow Extended (TFX) components for automated data processing, validation, and model training.",
       "Implemented data ingestion with CsvExampleGen, statistics generation with StatisticsGen, and schema inference with SchemaGen for robust data handling.",
@@ -181,14 +221,19 @@ export const PROJECTS: Project[] = [
       "Achieved 89% binary accuracy and 0.94 AUC score, with systematic evaluation using TFX Evaluator component and threshold-based model validation.",
     ],
     techStack: ["Python", "TensorFlow", "TFX", "Keras", "TF Data Validation"],
-    highlights: ["End-to-End ML Pipeline", "TFX Components", "High Accuracy Model"],
+    highlights: [
+      "End-to-End ML Pipeline",
+      "TFX Components",
+      "High Accuracy Model",
+    ],
     image: projectTweetsSentiment,
     github: "https://github.com/NaufalHD12/tweets-sentiment-analysis",
   },
   {
     slug: "anime-recommendation-system",
     title: "Anime Recommendation System",
-    summary: "Built a hybrid recommendation engine combining content-based and collaborative filtering for personalized anime suggestions.",
+    summary:
+      "Built a hybrid recommendation engine combining content-based and collaborative filtering for personalized anime suggestions.",
     description: [
       "Developed a robust recommendation system model using Content-Based and Collaborative Filtering techniques to help users discover new anime.",
       "Implemented content-based filtering by analyzing anime metadata (genres, themes, demographics) to find similar content.",
@@ -197,14 +242,19 @@ export const PROJECTS: Project[] = [
       "Achieved high precision and low prediction error through extensive model evaluation and optimization.",
     ],
     techStack: ["Python", "TensorFlow", "Scikit-learn", "Pandas", "NumPy"],
-    highlights: ["Hybrid Recommendation", "Content & Collaborative Filtering", "High Accuracy"],
+    highlights: [
+      "Hybrid Recommendation",
+      "Content & Collaborative Filtering",
+      "High Accuracy",
+    ],
     image: projectAnimeRecommendation,
     github: "https://github.com/NaufalHD12/anime-recommendation-system",
   },
   {
     slug: "student-performance-predictor",
     title: "Student Performance Predictor",
-    summary: "Created a machine learning model using CatBoost to predict student academic performance based on comprehensive feature analysis.",
+    summary:
+      "Created a machine learning model using CatBoost to predict student academic performance based on comprehensive feature analysis.",
     description: [
       "Conducted extensive exploratory data analysis on the UCI Student Performance dataset, examining correlations between demographic, behavioral, and academic factors.",
       "Performed comprehensive feature engineering, including encoding categorical variables and standardizing numerical features for optimal model performance.",
@@ -213,14 +263,19 @@ export const PROJECTS: Project[] = [
       "Identified key predictors of academic success, including parental education, study time, and past academic performance.",
     ],
     techStack: ["Python", "CatBoost", "Scikit-learn", "Pandas", "Matplotlib"],
-    highlights: ["Comprehensive EDA", "Multiple ML Algorithms", "High Prediction Accuracy"],
+    highlights: [
+      "Comprehensive EDA",
+      "Multiple ML Algorithms",
+      "High Prediction Accuracy",
+    ],
     image: projectStudentPerformance,
     github: "https://github.com/NaufalHD12/student-performance-predictor",
   },
   {
     slug: "ecommerce-public-dashboard",
     title: "Ecommerce Public Dashboard",
-    summary: "Developed an interactive Streamlit dashboard for ecommerce analytics with comprehensive data visualization and business insights.",
+    summary:
+      "Developed an interactive Streamlit dashboard for ecommerce analytics with comprehensive data visualization and business insights.",
     description: [
       "Built a comprehensive ecommerce analytics dashboard using Streamlit for interactive data exploration and visualization.",
       "Implemented data processing pipelines to handle large datasets and perform real-time calculations for key business metrics.",
@@ -229,7 +284,11 @@ export const PROJECTS: Project[] = [
       "Deployed the dashboard on Streamlit Cloud for public access and easy sharing with stakeholders.",
     ],
     techStack: ["Python", "Streamlit", "Pandas", "Plotly", "NumPy"],
-    highlights: ["Interactive Dashboard", "Real-time Analytics", "Public Deployment"],
+    highlights: [
+      "Interactive Dashboard",
+      "Real-time Analytics",
+      "Public Deployment",
+    ],
     image: projectEcommerceDashboard,
     github: "https://github.com/NaufalHD12/ecommerce-public-dashboard",
     demo: "https://submission-ecommerce-public-dtwvbgakmi3wdkutzwun8p.streamlit.app/",
@@ -237,7 +296,8 @@ export const PROJECTS: Project[] = [
   {
     slug: "bike-sharing-dashboard",
     title: "Bike Sharing Dashboard",
-    summary: "Created a comprehensive data analysis dashboard for bike sharing systems with predictive analytics and usage insights.",
+    summary:
+      "Created a comprehensive data analysis dashboard for bike sharing systems with predictive analytics and usage insights.",
     description: [
       "Developed a complete data analysis solution for bike sharing systems using Python and Streamlit for the dashboard interface.",
       "Implemented data preprocessing and cleaning pipelines to handle raw bike sharing data including weather conditions, seasonality, and usage patterns.",
@@ -245,7 +305,11 @@ export const PROJECTS: Project[] = [
       "Deployed the dashboard on Streamlit Cloud for easy access and real-time data exploration.",
     ],
     techStack: ["Python", "Streamlit", "Scikit-learn", "Pandas", "Plotly"],
-    highlights: ["Predictive Analytics", "Usage Pattern Analysis", "Interactive Visualizations"],
+    highlights: [
+      "Predictive Analytics",
+      "Usage Pattern Analysis",
+      "Interactive Visualizations",
+    ],
     image: projectBikeSharing,
     github: "https://github.com/NaufalHD12/bike-sharing-dashboard",
     demo: "https://bikesharinganalysisfal.streamlit.app/",
