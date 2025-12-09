@@ -39,7 +39,7 @@ export const ContactSection = () => {
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
           >
             <motion.a
-              href="mailto:naufalhd12@gmail.com"
+              href="mailto:naufalhadi1204@gmail.com"
               className="flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground rounded-xl font-semibold text-lg glow"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
