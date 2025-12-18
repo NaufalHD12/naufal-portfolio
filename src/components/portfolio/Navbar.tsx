@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { useActiveSection } from "@/hooks/use-active-section";
 
 const navLinks = [
   { href: "#about", label: "About" },
@@ -14,6 +15,10 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  
+  // Get section IDs from navLinks
+  const sectionIds = navLinks.map(link => link.href.replace('#', ''));
+  const activeSection = useActiveSection(sectionIds);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -72,16 +77,31 @@ export const Navbar = () => {
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-6 md:gap-8">
-            {navLinks.map((link) => (
-              <motion.button
-                key={link.href}
-                onClick={() => handleNavClick(link.href)}
-                className="text-muted-foreground hover:text-primary transition-colors font-medium"
-                whileHover={{ y: -2 }}
-              >
-                {link.label}
-              </motion.button>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = activeSection === link.href.replace('#', '');
+              return (
+                <motion.button
+                  key={link.href}
+                  onClick={() => handleNavClick(link.href)}
+                  className={`transition-colors font-medium relative ${
+                    isActive 
+                      ? 'text-primary' 
+                      : 'text-muted-foreground hover:text-primary'
+                  }`}
+                  whileHover={{ y: -2 }}
+                >
+                  {link.label}
+                  {isActive && (
+                    <motion.div
+                      layoutId="activeSection"
+                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary rounded-full"
+                      initial={false}
+                      transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                    />
+                  )}
+                </motion.button>
+              );
+            })}
           </div>
 
           <motion.button
@@ -114,18 +134,25 @@ export const Navbar = () => {
             className="md:hidden fixed top-20 left-12 right-12 z-40 glass rounded-2xl shadow-2xl border border-border/10 overflow-hidden"
           >
             <div className="px-6 py-6 flex flex-col gap-4">
-              {navLinks.map((link) => (
-                <button
-                  key={link.href}
-                  onClick={() => {
-                    handleNavClick(link.href);
-                    setIsOpen(false);
-                  }}
-                  className="text-muted-foreground hover:text-primary transition-colors font-medium py-2 text-center hover:bg-primary/5 rounded-lg px-3 w-full"
-                >
-                  {link.label}
-                </button>
-              ))}
+              {navLinks.map((link) => {
+                const isActive = activeSection === link.href.replace('#', '');
+                return (
+                  <button
+                    key={link.href}
+                    onClick={() => {
+                      handleNavClick(link.href);
+                      setIsOpen(false);
+                    }}
+                    className={`transition-colors font-medium py-2 text-center hover:bg-primary/5 rounded-lg px-3 w-full ${
+                      isActive 
+                        ? 'text-primary bg-primary/10' 
+                        : 'text-muted-foreground hover:text-primary'
+                    }`}
+                  >
+                    {link.label}
+                  </button>
+                );
+              })}
               <div className="border-t border-border/20 pt-4 mt-2 flex justify-center">
                 <button
                   onClick={() => {
