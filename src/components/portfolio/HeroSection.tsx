@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Github, Linkedin, Instagram } from "lucide-react";
 import { SOCIALS } from "@/data/portfolio";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/hero-bg.webp";
 
 export const HeroSection = () => {
   return (

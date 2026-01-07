@@ -59,7 +59,7 @@ export const Navbar = () => {
             whileHover={{ scale: 1.05 }}
           >
             <img
-              src="/my-photo.png"
+              src="/my-photo.webp"
               alt="Naufal HD"
               className="w-full h-full object-cover"
               onError={(e) => {

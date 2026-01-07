@@ -1,22 +1,24 @@
 import { FaNodeJs, FaPython, FaDocker, FaAws, FaGitAlt, FaCogs, FaRobot, FaDatabase } from "react-icons/fa";
 import {
-  SiScikitlearn, SiTensorflow, SiFlask, SiFastapi, SiDjango, SiJavascript, SiDotnet, SiAlpinedotjs, SiReact, SiHtmx, SiTailwindcss, SiMongodb, SiPostgresql, SiGooglecloud, SiExpress, SiGraphql, SiLangchain, SiSocketdotio, SiRedis, SiOpenai, SiChartdotjs, SiPandas, SiNumpy, SiPlotly
+  SiScikitlearn, SiTensorflow, SiFlask, SiFastapi, SiDjango, SiJavascript, SiDotnet, SiAlpinedotjs, SiReact, SiHtmx, SiTailwindcss, SiMongodb, SiPostgresql, SiGooglecloud, SiExpress, SiGraphql, SiLangchain, SiSocketdotio, SiRedis, SiOpenai, SiChartdotjs, SiPandas, SiNumpy, SiPlotly, SiTypescript, SiRabbitmq, SiCelery, SiKeras, SiStreamlit
 } from "react-icons/si";
 import { TbBrandCSharp } from "react-icons/tb";
 import { IconType } from "react-icons";
 
 // Project images
-import projectPredictiveMaintenance from "@/assets/project-predictive-maintenance.png";
-import projectEcoTracker from "@/assets/project-eco-tracker.png";
-import projectPersonaNexus from "@/assets/project-persona-nexus.png";
-import projectVentureMind from "@/assets/project-venture-mind.png";
-import projectSynapsisAi from "@/assets/project-synapsis-ai.png";
-import projectAcnescan from "@/assets/project-acnescan.png";
-import projectTweetsSentiment from "@/assets/project-tweets-sentiment-analysis.png";
-import projectAnimeRecommendation from "@/assets/project-anime-recommendation-system.png";
-import projectStudentPerformance from "@/assets/project-student-performance-predictor.png";
-import projectEcommerceDashboard from "@/assets/project-ecommerce-public-dashboard.png";
-import projectBikeSharing from "@/assets/project-bike-sharing-dashboard.png";
+import projectPredictiveMaintenance from "@/assets/project-predictive-maintenance.webp";
+import projectEcoTracker from "@/assets/project-eco-tracker.webp";
+import projectPersonaNexus from "@/assets/project-persona-nexus.webp";
+import projectVentureMind from "@/assets/project-venture-mind.webp";
+import projectSynapsisAi from "@/assets/project-synapsis-ai.webp";
+import projectAcnescan from "@/assets/project-acnescan.webp";
+import projectTweetsSentiment from "@/assets/project-tweets-sentiment-analysis.webp";
+import projectAnimeRecommendation from "@/assets/project-anime-recommendation-system.webp";
+import projectStudentPerformance from "@/assets/project-student-performance-predictor.webp";
+import projectEcommerceDashboard from "@/assets/project-ecommerce-public-dashboard.webp";
+import projectBikeSharing from "@/assets/project-bike-sharing-dashboard.webp";
+import projectEchobrief from "@/assets/project-echobrief.webp";
+
 
 export interface Skill {
   name: string;
@@ -81,10 +83,46 @@ export const SKILLS: Skill[] = [
   { name: "OpenAI", icon: SiOpenai },
   { name: "AI/ML", icon: FaRobot },
   { name: "Chart.js", icon: SiChartdotjs },
-  { name: "Socket.IO", icon: SiSocketdotio }
+  { name: "Socket.IO", icon: SiSocketdotio },
+  { name: "TypeScript", icon: SiTypescript },
+  { name: "PostgreSQL", icon: SiPostgresql },
+  { name: "RabbitMQ", icon: SiRabbitmq },
+  { name: "Celery", icon: SiCelery },
+  { name: "Keras", icon: SiKeras },
+  { name: "Streamlit", icon: SiStreamlit }
 ];
 
 export const PROJECTS: Project[] = [
+  {
+    slug: "echobrief",
+    title: "EchoBrief: AI News Podcast Platform",
+    summary:
+      "Built a full-stack application that transforms news articles into AI-generated podcast audio using DeepSeek for summarization and Edge TTS for audio synthesis.",
+    description: [
+      "Developed a complete news-to-podcast platform that aggregates articles from RSS feeds, generates intelligent summaries, and produces high-quality audio content.",
+      "Implemented a full-stack architecture with FastAPI backend, React frontend, PostgreSQL database, Redis caching, and RabbitMQ with Celery for async task processing.",
+      "Integrated AI services including DeepSeek for content summarization and Edge TTS for natural-sounding audio generation with multiple voice options.",
+      "Built user authentication with JWT tokens and Google OAuth 2.0, along with a subscription system integrated with Ko-fi for payments.",
+      "Created an admin dashboard for user management, content control, and system operations including news aggregation triggers.",
+    ],
+    techStack: [
+      "FastAPI",
+      "React",
+      "TypeScript",
+      "PostgreSQL",
+      "RabbitMQ",
+      "Redis",
+      "Celery",
+      "Docker",
+    ],
+    highlights: [
+      "Full-Stack Application",
+      "AI-Powered Audio",
+      "Async Task Processing",
+    ],
+    image: projectEchobrief,
+    github: "https://github.com/NaufalHD12/echobrief",
+  },
   {
     slug: "predictive-maintenance-copilot",
     title: "Predictive Maintenance Copilot",
@@ -114,16 +152,18 @@ export const PROJECTS: Project[] = [
   },
   {
     slug: "eco-tracker",
-    title: "EcoTracker: Carbon Footprint App",
+    title: "EcoTracker: Carbon Footprint Tracker",
     summary:
-      "Built a scalable MERN-stack app with RESTful APIs, caching, and secure authentication for users to track and reduce their carbon footprints.",
+      "Built a comprehensive MERN-stack carbon footprint tracker with activity logging, interactive dashboard, community challenges, and educational quizzes.",
     description: [
-      "Architected a robust RESTful API with Node.js and Express, featuring comprehensive OpenAPI documentation.",
-      "Optimized application performance by integrating Redis for efficient caching strategies.",
-      "Secured user data through a JWT-based authentication system with role-based access control.",
+      "Developed a full-stack personal carbon footprint tracking application using React 19, Node.js, Express, and MongoDB with comprehensive feature set.",
+      "Implemented activity logging across 4 categories (Transportation, Food, Energy, Shopping) with accurate emission calculations using DEFRA 2024 emission factors.",
+      "Built an intelligent dashboard with interactive Recharts visualizations, weekly/monthly/yearly statistics, and tree planting equivalent metrics.",
+      "Created community challenges with leaderboards, progress tracking, and badge systems to encourage carbon reduction.",
+      "Integrated educational quizzes with difficulty levels, score tracking, and cooldown systems for consistent learning.",
     ],
-    techStack: ["Node.js", "Express", "MongoDB", "Redis", "JWT"],
-    highlights: ["RESTful API", "Caching & Rate Limiting", "RBAC Security"],
+    techStack: ["React", "Node.js", "Express", "MongoDB", "Redis", "TailwindCSS", "Recharts", "JWT"],
+    highlights: ["Full-Stack MERN", "Interactive Dashboard", "Gamification Features"],
     image: projectEcoTracker,
     github: "https://github.com/NaufalHD12/eco-tracker",
   },
