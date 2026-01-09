@@ -241,7 +241,7 @@ export const TIMELINE: TimelineItem[] = [
     title: "Software Engineer Intern",
     subtitle: "PT Kilang Pertamina Internasional",
     date: "Feb 2025 – May 2025",
-    description: "Developed an AI-powered data entry automation system using Python and a full-stack equipment registration app."
+    description: "Engineered RAG pipelines for document automation and built internal .NET enterprise tools."
   },
   {
     title: "Machine Learning",
