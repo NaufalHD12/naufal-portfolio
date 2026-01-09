@@ -1,6 +1,9 @@
-import { FaNodeJs, FaPython, FaDocker, FaAws, FaGitAlt, FaCogs, FaRobot, FaDatabase } from "react-icons/fa";
+import { FaNodeJs, FaPython, FaAws, FaGitAlt, FaDatabase, FaProjectDiagram } from "react-icons/fa";
 import {
-  SiScikitlearn, SiTensorflow, SiFlask, SiFastapi, SiDjango, SiJavascript, SiDotnet, SiAlpinedotjs, SiReact, SiHtmx, SiTailwindcss, SiMongodb, SiPostgresql, SiGooglecloud, SiExpress, SiGraphql, SiLangchain, SiSocketdotio, SiRedis, SiOpenai, SiChartdotjs, SiPandas, SiNumpy, SiPlotly, SiTypescript, SiRabbitmq, SiCelery, SiKeras, SiStreamlit
+  SiScikitlearn, SiTensorflow, SiFlask, SiFastapi, SiDjango, SiJavascript, SiDotnet,
+  SiReact, SiHtmx, SiTailwindcss, SiMongodb, SiPostgresql, SiGooglecloud, SiExpress,
+  SiLangchain, SiSocketdotio, SiRabbitmq, SiRedis, SiCelery, SiKeras, SiStreamlit,
+  SiTypescript, SiKubernetes, SiGithubactions, SiDocker
 } from "react-icons/si";
 import { TbBrandCSharp } from "react-icons/tb";
 import { IconType } from "react-icons";
@@ -23,6 +26,11 @@ import projectEchobrief from "@/assets/project-echobrief.webp";
 export interface Skill {
   name: string;
   icon: IconType;
+}
+
+export interface SkillCategory {
+  title: string;
+  skills: Skill[];
 }
 
 export interface Project {
@@ -49,310 +57,170 @@ export interface Certification {
   link: string;
 }
 
-export const SKILLS: Skill[] = [
-  { name: "Python", icon: FaPython },
-  { name: "FastAPI", icon: SiFastapi },
-  { name: "Django", icon: SiDjango },
-  { name: "Flask", icon: SiFlask },
-  { name: "JavaScript", icon: SiJavascript },
-  { name: "NodeJS", icon: FaNodeJs },
-  { name: "Express", icon: SiExpress },
-  { name: "Hapi", icon: FaNodeJs },
-  { name: "C#", icon: TbBrandCSharp },
-  { name: "ASP.NET", icon: SiDotnet },
-  { name: "Alpine", icon: SiAlpinedotjs },
-  { name: "React", icon: SiReact },
-  { name: "HTMX", icon: SiHtmx },
-  { name: "Tailwind", icon: SiTailwindcss },
-  { name: "SQL", icon: SiPostgresql },
-  { name: "MongoDB", icon: SiMongodb },
-  { name: "Redis", icon: SiRedis },
-  { name: "TimescaleDB", icon: FaDatabase },
-  { name: "Neo4j", icon: SiGraphql },
-  { name: "Git", icon: FaGitAlt },
-  { name: "Docker", icon: FaDocker },
-  { name: "SDLC", icon: FaCogs },
-  { name: "AWS", icon: FaAws },
-  { name: "GCP", icon: SiGooglecloud },
-  { name: "TensorFlow", icon: SiTensorflow },
-  { name: "Scikit-learn", icon: SiScikitlearn },
-  { name: "Pandas", icon: SiPandas },
-  { name: "NumPy", icon: SiNumpy },
-  { name: "Plotly", icon: SiPlotly },
-  { name: "LangChain", icon: SiLangchain },
-  { name: "OpenAI", icon: SiOpenai },
-  { name: "AI/ML", icon: FaRobot },
-  { name: "Chart.js", icon: SiChartdotjs },
-  { name: "Socket.IO", icon: SiSocketdotio },
-  { name: "TypeScript", icon: SiTypescript },
-  { name: "PostgreSQL", icon: SiPostgresql },
-  { name: "RabbitMQ", icon: SiRabbitmq },
-  { name: "Celery", icon: SiCelery },
-  { name: "Keras", icon: SiKeras },
-  { name: "Streamlit", icon: SiStreamlit }
+export const SKILLS: SkillCategory[] = [
+  {
+    title: "Programming Languages",
+    skills: [
+      { name: "Python", icon: FaPython },
+      { name: "JavaScript", icon: SiJavascript },
+      { name: "C#", icon: TbBrandCSharp },
+      { name: "TypeScript", icon: SiTypescript },
+    ]
+  },
+  {
+    title: "Backend Framework",
+    skills: [
+        { name: "FastAPI", icon: SiFastapi },
+        { name: "Django", icon: SiDjango },
+        { name: "Express", icon: SiExpress },
+        { name: "Hapi", icon: FaNodeJs },
+        { name: "ASP.NET Core", icon: SiDotnet },
+        { name: "Flask", icon: SiFlask },
+    ]
+  },
+  {
+    title: "Databases",
+    skills: [
+        { name: "PostgreSQL", icon: SiPostgresql },
+        { name: "SQL Server", icon: FaDatabase },
+        { name: "ChromaDB", icon: FaDatabase },
+        { name: "MongoDB", icon: SiMongodb },
+        { name: "Neo4j", icon: FaDatabase },
+        { name: "Redis", icon: SiRedis },
+    ]
+  },
+  {
+    title: "ML/AI Framework",
+    skills: [
+        { name: "TensorFlow", icon: SiTensorflow },
+        { name: "Scikit-learn", icon: SiScikitlearn },
+        { name: "LangChain", icon: SiLangchain },
+        { name: "LangGraph", icon: FaProjectDiagram },
+        { name: "Keras", icon: SiKeras },
+    ]
+  },
+  {
+    title: "Cloud & DevOps",
+    skills: [
+        { name: "Docker", icon: SiDocker },
+        { name: "Kubernetes", icon: SiKubernetes },
+        { name: "AWS", icon: FaAws },
+        { name: "GCP", icon: SiGooglecloud },
+        { name: "Git", icon: FaGitAlt },
+        { name: "GitHub Actions", icon: SiGithubactions },
+    ]
+  },
+  {
+    title: "Frontend Framework",
+    skills: [
+        { name: "React", icon: SiReact },
+        { name: "Tailwind CSS", icon: SiTailwindcss },
+        { name: "HTMX", icon: SiHtmx },
+        { name: "Streamlit", icon: SiStreamlit }, 
+    ]
+  },
+  {
+    title: "Tools & Ecosystem",
+    skills: [
+        { name: "RabbitMQ", icon: SiRabbitmq },
+        { name: "Celery", icon: SiCelery },
+        { name: "Socket.IO", icon: SiSocketdotio },
+    ]
+  }
 ];
 
-export const PROJECTS: Project[] = [
-  {
-    slug: "echobrief",
-    title: "EchoBrief: AI News Podcast Platform",
-    summary:
-      "Built a full-stack application that transforms news articles into AI-generated podcast audio using DeepSeek for summarization and Edge TTS for audio synthesis.",
-    description: [
-      "Developed a complete news-to-podcast platform that aggregates articles from RSS feeds, generates intelligent summaries, and produces high-quality audio content.",
-      "Implemented a full-stack architecture with FastAPI backend, React frontend, PostgreSQL database, Redis caching, and RabbitMQ with Celery for async task processing.",
-      "Integrated AI services including DeepSeek for content summarization and Edge TTS for natural-sounding audio generation with multiple voice options.",
-      "Built user authentication with JWT tokens and Google OAuth 2.0, along with a subscription system integrated with Ko-fi for payments.",
-      "Created an admin dashboard for user management, content control, and system operations including news aggregation triggers.",
-    ],
-    techStack: [
-      "FastAPI",
-      "React",
-      "TypeScript",
-      "PostgreSQL",
-      "RabbitMQ",
-      "Redis",
-      "Celery",
-      "Docker",
-    ],
-    highlights: [
-      "Full-Stack Application",
-      "AI-Powered Audio",
-      "Async Task Processing",
-    ],
-    image: projectEchobrief,
-    github: "https://github.com/NaufalHD12/echobrief",
-  },
+
+export const PROJECTS = [
   {
     slug: "predictive-maintenance-copilot",
     title: "Predictive Maintenance Copilot",
     summary:
-      "Architected a microservices-based predictive maintenance platform for manufacturing, integrating AI agents for real-time machine health analysis and alerts.",
+      "Enterprise-grade microservices platform for industrial IoT, featuring autonomous AI agents for real-time machine health diagnosis.",
     description: [
-      "Architected and led the development of a predictive maintenance platform for the manufacturing sector, orchestrating a microservices ecosystem to monitor industrial machine health.",
-      "Implemented real-time event streaming via Socket.IO to deliver critical machine failure alerts and synchronized updates across the dashboard.",
-      "Engineered an Agentic AI service using FastAPI, LangChain, and LangGraph to analyze telemetry data, providing instant root-cause insights and maintenance recommendations.",
+      "Architected a high-throughput microservices ecosystem for industrial IoT, utilizing Node.js (Hapi) for logic and TimescaleDB for massive sensor logs.",
+      "Engineered an autonomous Agentic AI service using LangGraph that proactively diagnoses anomalies and prescribes maintenance actions.",
+      "Implemented event-driven architecture via Socket.IO to stream critical failure alerts to operators with sub-second latency.",
     ],
-    techStack: [
-      "Hapi",
-      "NodeJS",
-      "FastAPI",
-      "LangChain",
-      "LangGraph",
-      "Socket.IO",
-      "TimescaleDB",
-    ],
-    highlights: [
-      "Microservices architecture",
-      "Agentic AI",
-      "Real-time streaming",
-    ],
+    techStack: ["Microservices", "FastAPI", "LangGraph", "TimescaleDB", "Socket.IO", "Docker"],
+    highlights: ["Agentic AI", "Industrial IoT", "Event-Driven"],
     image: projectPredictiveMaintenance,
     github: "https://github.com/NaufalHD12/predictive-maintenance-copilot",
   },
   {
-    slug: "eco-tracker",
-    title: "EcoTracker: Carbon Footprint Tracker",
+    slug: "echobrief",
+    title: "EchoBrief: AI News Podcast SaaS",
     summary:
-      "Built a comprehensive MERN-stack carbon footprint tracker with activity logging, interactive dashboard, community challenges, and educational quizzes.",
+      "News-to-Audio SaaS platform orchestrating GenAI pipelines for automated content synthesis and voice generation.",
     description: [
-      "Developed a full-stack personal carbon footprint tracking application using React 19, Node.js, Express, and MongoDB with comprehensive feature set.",
-      "Implemented activity logging across 4 categories (Transportation, Food, Energy, Shopping) with accurate emission calculations using DEFRA 2024 emission factors.",
-      "Built an intelligent dashboard with interactive Recharts visualizations, weekly/monthly/yearly statistics, and tree planting equivalent metrics.",
-      "Created community challenges with leaderboards, progress tracking, and badge systems to encourage carbon reduction.",
-      "Integrated educational quizzes with difficulty levels, score tracking, and cooldown systems for consistent learning.",
+      "Built a scalable content pipeline that aggregates RSS feeds and transforms text into podcast-grade audio using DeepSeek and Edge TTS.",
+      "Orchestrated asynchronous background processing using Celery and RabbitMQ to handle resource-intensive media generation tasks without blocking the UI.",
+      "Implemented secure subscription tiers and API rate limiting using Redis, integrated with a payment gateway.",
     ],
-    techStack: ["React", "Node.js", "Express", "MongoDB", "Redis", "TailwindCSS", "Recharts", "JWT"],
-    highlights: ["Full-Stack MERN", "Interactive Dashboard", "Gamification Features"],
+    techStack: ["FastAPI", "React", "RabbitMQ", "Celery", "PostgreSQL", "Redis"],
+    highlights: ["SaaS Architecture", "Async Processing", "GenAI Pipeline"],
+    image: projectEchobrief,
+    github: "https://github.com/NaufalHD12/echobrief",
+  },
+  {
+    slug: "eco-tracker",
+    title: "EcoTracker: Carbon Analytics Engine",
+    summary:
+      "Precision-focused carbon tracking platform featuring complex aggregation pipelines and gamified user engagement mechanics.",
+    description: [
+      "Engineered a precision-focused calculation engine utilizing DEFRA 2024 standards, transforming multi-category inputs into standardized emission metrics.",
+      "Optimized MongoDB aggregation pipelines to process complex time-series data, enabling real-time generation of analytics dashboards.",
+      "Architected a modular gamification system that handles state management for dynamic leaderboards and user retention loops.",
+    ],
+    techStack: ["React 19", "Node.js", "MongoDB Aggregations", "Redis", "Recharts"],
+    highlights: ["Data Visualization", "Complex Logic", "System Design"],
     image: projectEcoTracker,
     github: "https://github.com/NaufalHD12/eco-tracker",
   },
   {
-    slug: "persona-nexus",
-    title: "Persona Nexus: AI Community Platform",
+    slug: "venture-mind",
+    title: "VentureMind: Multi-Agent Business Strategist",
     summary:
-      "Developed a full-stack community platform with AI moderation, real-time features, and DevOps pipeline for seamless social interactions.",
+      "Collaborative multi-agent system utilizing CrewAI to autonomously research and generate comprehensive business strategies.",
     description: [
-      "Architected and developed the full-stack web application using Django, HTMX, and Alpine.js.",
-      "Implemented comprehensive social features, including OAuth authentication and real-time notifications.",
-      "Integrated AI functionality for content moderation and writing assistance.",
+      "Orchestrated a Multi-Agent System (MAS) using CrewAI where distinct AI agents collaborate to perform market research, SWOT analysis, and strategy formulation.",
+      "Integrated a RAG (Retrieval-Augmented Generation) layer with Tavily Search API to ground model outputs in real-time web data.",
+      "Deployed as a containerized service ensuring consistent runtime environments across development and production.",
     ],
-    techStack: [
-      "Django",
-      "HTMX",
-      "Alpine.js",
-      "OAuth",
-      "Chart.js",
-      "AWS EC2",
-      "Docker",
+    techStack: ["CrewAI", "RAG", "FastAPI", "Docker", "PostgreSQL"],
+    highlights: ["Multi-Agent System", "Autonomous Research", "LLM Orchestration"],
+    image: projectVentureMind,
+    github: "https://github.com/NaufalHD12/venture-mind",
+  },
+  {
+    slug: "persona-nexus",
+    title: "Persona Nexus: Community Platform",
+    summary:
+      "Full-stack social forum engineered for performance using Server-Side Rendering (SSR) and AI-assisted content moderation.",
+    description: [
+      "Architected a monolithic application using Django and HTMX to achieve Single Page Application (SPA) fluidity with Server-Side Rendering reliability.",
+      "Integrated an AI moderation layer to automatically flag toxic content and assist users in drafting posts.",
+      "Implemented a complete CI/CD pipeline using GitHub Actions for automated testing and deployment to AWS EC2.",
     ],
-    highlights: ["Full-Stack Development", "AI Integration", "DevOps Pipeline"],
+    techStack: ["Django", "HTMX", "AWS EC2", "CI/CD", "PostgreSQL"],
+    highlights: ["Server-Side Rendering", "DevOps", "AI Moderation"],
     image: projectPersonaNexus,
     github: "https://github.com/NaufalHD12/PersonaNexus",
     demo: "https://www.personanexus.club/",
   },
-  {
-    slug: "venture-mind",
-    title: "VentureMind: AI Business Co-Pilot",
-    summary:
-      "Created a multi-agent AI system for generating business strategies, with RAG integration and asynchronous processing.",
-    description: [
-      "Designed a multi-agent AI system using CrewAI and GPT-4.1-mini for collaborative strategy generation.",
-      "Integrated Retrieval-Augmented Generation with Tavily Search API for real-time market data.",
-    ],
-    techStack: [
-      "CrewAI",
-      "GPT-4.1-mini",
-      "RAG",
-      "FastAPI",
-      "PostgreSQL",
-      "Docker",
-    ],
-    highlights: ["Multi-Agent AI", "RAG Integration", "Async Architecture"],
-    image: projectVentureMind,
-    github: "https://github.com/NaufalHD12/venture-mind",
-    demo: "https://venture-mind-production-531d.up.railway.app/",
-  },
-  {
+   {
     slug: "synapsis-ai",
-    title: "Synapsis AI: CV Screening System",
+    title: "Synapsis AI: Intelligent ATS Pipeline",
     summary:
-      "Engineered an AI-driven recruitment tool for multi-language CV screening with batch processing.",
+      "Automated recruitment tool capable of batch-processing CVs and matching them against job descriptions using LLMs.",
     description: [
-      "Engineered an intelligent screening system to analyze job descriptions against CVs simultaneously.",
-      "Developed a multi-language pipeline leveraging DeepSeek for matching scores and analysis.",
+      "Engineered an intelligent document processing pipeline using PyMuPDF and DeepSeek to extract and analyze candidate data from diverse file formats.",
+      "Optimized for batch processing, allowing HR teams to rank hundreds of applicants against job requirements in minutes.",
+      "Built a responsive interface for detailed candidate breakdown and match justification.",
     ],
-    techStack: ["Python", "Flask", "DeepSeek", "PyMuPDF", "Pandas"],
-    highlights: ["AI Screening Pipeline", "Multi-Language", "Batch Processing"],
+    techStack: ["Python", "Flask", "LLM Engineering", "Pandas", "Document Processing"],
+    highlights: ["Automated Screening", "Batch Processing", "NLP"],
     image: projectSynapsisAi,
     github: "https://github.com/NaufalHD12/synapsis-ai",
-    demo: "https://synapsis-ai-production.up.railway.app/",
-  },
-  {
-    slug: "acnescan",
-    title: "AcneScan: Acne Detection App",
-    summary:
-      "Trained a CNN model for acne classification achieving 98% F1-score and deployed on GCP.",
-    description: [
-      "Designed and trained a CNN image classification model using TensorFlow and EfficientNetB0.",
-      "Built a RESTful API with Flask and deployed it on Google Cloud Platform.",
-    ],
-    techStack: [
-      "TensorFlow",
-      "EfficientNetB0",
-      "Flask",
-      "GCP",
-      "TensorFlow Lite",
-    ],
-    highlights: ["CNN Model Training", "98% F1-Score", "Cloud Deployment"],
-    image: projectAcnescan,
-    github: "https://github.com/Acne-Scan",
-  },
-  {
-    slug: "tweets-sentiment-analysis",
-    title: "Tweets Sentiment Analysis",
-    summary:
-      "Developed an end-to-end ML pipeline using TFX for sentiment analysis of tweets, achieving high accuracy in binary classification.",
-    description: [
-      "Built a comprehensive machine learning pipeline using TensorFlow Extended (TFX) components for automated data processing, validation, and model training.",
-      "Implemented data ingestion with CsvExampleGen, statistics generation with StatisticsGen, and schema inference with SchemaGen for robust data handling.",
-      "Created anomaly detection using ExampleValidator and data transformation with Transform component for feature engineering and preprocessing.",
-      "Developed a binary classification model using TensorFlow/Keras with text vectorization, embedding layers, and convolutional networks for sentiment analysis.",
-      "Achieved 89% binary accuracy and 0.94 AUC score, with systematic evaluation using TFX Evaluator component and threshold-based model validation.",
-    ],
-    techStack: ["Python", "TensorFlow", "TFX", "Keras", "TF Data Validation"],
-    highlights: [
-      "End-to-End ML Pipeline",
-      "TFX Components",
-      "High Accuracy Model",
-    ],
-    image: projectTweetsSentiment,
-    github: "https://github.com/NaufalHD12/tweets-sentiment-analysis",
-  },
-  {
-    slug: "anime-recommendation-system",
-    title: "Anime Recommendation System",
-    summary:
-      "Built a hybrid recommendation engine combining content-based and collaborative filtering for personalized anime suggestions.",
-    description: [
-      "Developed a robust recommendation system model using Content-Based and Collaborative Filtering techniques to help users discover new anime.",
-      "Implemented content-based filtering by analyzing anime metadata (genres, themes, demographics) to find similar content.",
-      "Applied collaborative filtering using user ratings and preferences to identify patterns and make personalized recommendations.",
-      "Combined both approaches in a hybrid system to overcome limitations of individual methods and improve recommendation accuracy.",
-      "Achieved high precision and low prediction error through extensive model evaluation and optimization.",
-    ],
-    techStack: ["Python", "TensorFlow", "Scikit-learn", "Pandas", "NumPy"],
-    highlights: [
-      "Hybrid Recommendation",
-      "Content & Collaborative Filtering",
-      "High Accuracy",
-    ],
-    image: projectAnimeRecommendation,
-    github: "https://github.com/NaufalHD12/anime-recommendation-system",
-  },
-  {
-    slug: "student-performance-predictor",
-    title: "Student Performance Predictor",
-    summary:
-      "Created a machine learning model using CatBoost to predict student academic performance based on comprehensive feature analysis.",
-    description: [
-      "Conducted extensive exploratory data analysis on the UCI Student Performance dataset, examining correlations between demographic, behavioral, and academic factors.",
-      "Performed comprehensive feature engineering, including encoding categorical variables and standardizing numerical features for optimal model performance.",
-      "Implemented and compared multiple regression algorithms including Linear Regression, KNN, Random Forest, XGBoost, and CatBoost.",
-      "Selected CatBoost as the final model due to its superior performance, achieving high R² scores and low error metrics on the test set.",
-      "Identified key predictors of academic success, including parental education, study time, and past academic performance.",
-    ],
-    techStack: ["Python", "CatBoost", "Scikit-learn", "Pandas", "Matplotlib"],
-    highlights: [
-      "Comprehensive EDA",
-      "Multiple ML Algorithms",
-      "High Prediction Accuracy",
-    ],
-    image: projectStudentPerformance,
-    github: "https://github.com/NaufalHD12/student-performance-predictor",
-  },
-  {
-    slug: "ecommerce-public-dashboard",
-    title: "Ecommerce Public Dashboard",
-    summary:
-      "Developed an interactive Streamlit dashboard for ecommerce analytics with comprehensive data visualization and business insights.",
-    description: [
-      "Built a comprehensive ecommerce analytics dashboard using Streamlit for interactive data exploration and visualization.",
-      "Implemented data processing pipelines to handle large datasets and perform real-time calculations for key business metrics.",
-      "Created multiple visualization types including charts, graphs, and KPI cards to display sales trends, customer behavior, and product performance.",
-      "Added filtering and drill-down capabilities to allow users to explore data at different granularities (daily, weekly, monthly).",
-      "Deployed the dashboard on Streamlit Cloud for public access and easy sharing with stakeholders.",
-    ],
-    techStack: ["Python", "Streamlit", "Pandas", "Plotly", "NumPy"],
-    highlights: [
-      "Interactive Dashboard",
-      "Real-time Analytics",
-      "Public Deployment",
-    ],
-    image: projectEcommerceDashboard,
-    github: "https://github.com/NaufalHD12/ecommerce-public-dashboard",
-    demo: "https://submission-ecommerce-public-dtwvbgakmi3wdkutzwun8p.streamlit.app/",
-  },
-  {
-    slug: "bike-sharing-dashboard",
-    title: "Bike Sharing Dashboard",
-    summary:
-      "Created a comprehensive data analysis dashboard for bike sharing systems with predictive analytics and usage insights.",
-    description: [
-      "Developed a complete data analysis solution for bike sharing systems using Python and Streamlit for the dashboard interface.",
-      "Implemented data preprocessing and cleaning pipelines to handle raw bike sharing data including weather conditions, seasonality, and usage patterns.",
-      "Created interactive visualizations showing usage patterns, peak hours, popular stations, and seasonal trends.",
-      "Deployed the dashboard on Streamlit Cloud for easy access and real-time data exploration.",
-    ],
-    techStack: ["Python", "Streamlit", "Scikit-learn", "Pandas", "Plotly"],
-    highlights: [
-      "Predictive Analytics",
-      "Usage Pattern Analysis",
-      "Interactive Visualizations",
-    ],
-    image: projectBikeSharing,
-    github: "https://github.com/NaufalHD12/bike-sharing-dashboard",
-    demo: "https://bikesharinganalysisfal.streamlit.app/",
   },
 ];
 
@@ -364,7 +232,7 @@ export const TIMELINE: TimelineItem[] = [
     description: "Advanced program focused on full-stack development with React, backend technologies, and AI integration."
   },
   {
-    title: "Data Scientist Intern",
+    title: "Project-Based Virtual Intern: Data Scientist",
     subtitle: "Home Credit Indonesia",
     date: "Feb 2025 – Mar 2025",
     description: "Developed credit scoring models achieving 96% accuracy and executed end-to-end data science workflow."
