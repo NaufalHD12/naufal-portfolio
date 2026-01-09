@@ -74,7 +74,7 @@ export const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed"
           >
-            Architecting the next generation of intelligent system.
+            Crafting code, chasing curiosity!
           </motion.p>
 
           <motion.div
