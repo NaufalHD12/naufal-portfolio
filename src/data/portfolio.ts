@@ -154,9 +154,9 @@ export const PROJECTS: Project[] = [
       "Docker",
     ],
     highlights: [
-      "Full-Stack Application",
+      "Task Queues",
+      "Background Processing",
       "AI-Powered Audio",
-      "Async Task Processing",
     ],
     image: projectEchobrief,
     github: "https://github.com/NaufalHD12/echobrief",
