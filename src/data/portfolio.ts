@@ -130,98 +130,162 @@ export const SKILLS: SkillCategory[] = [
 ];
 
 
-export const PROJECTS = [
-  {
-    slug: "predictive-maintenance-copilot",
-    title: "Predictive Maintenance Copilot",
-    summary:
-      "Enterprise-grade microservices platform for industrial IoT, featuring autonomous AI agents for real-time machine health diagnosis.",
-    description: [
-      "Architected a high-throughput microservices ecosystem for industrial IoT, utilizing Node.js (Hapi) for logic and TimescaleDB for massive sensor logs.",
-      "Engineered an autonomous Agentic AI service using LangGraph that proactively diagnoses anomalies and prescribes maintenance actions.",
-      "Implemented event-driven architecture via Socket.IO to stream critical failure alerts to operators with sub-second latency.",
-    ],
-    techStack: ["Microservices", "FastAPI", "LangGraph", "TimescaleDB", "Socket.IO", "Docker"],
-    highlights: ["Agentic AI", "Industrial IoT", "Event-Driven"],
-    image: projectPredictiveMaintenance,
-    github: "https://github.com/NaufalHD12/predictive-maintenance-copilot",
-  },
+export const PROJECTS: Project[] = [
   {
     slug: "echobrief",
-    title: "EchoBrief: AI News Podcast SaaS",
+    title: "EchoBrief: AI News Podcast Platform",
     summary:
-      "News-to-Audio SaaS platform orchestrating GenAI pipelines for automated content synthesis and voice generation.",
+      "Built a full-stack application that transforms news articles into AI-generated podcast audio using DeepSeek for summarization and Edge TTS for audio synthesis.",
     description: [
-      "Built a scalable content pipeline that aggregates RSS feeds and transforms text into podcast-grade audio using DeepSeek and Edge TTS.",
-      "Orchestrated asynchronous background processing using Celery and RabbitMQ to handle resource-intensive media generation tasks without blocking the UI.",
-      "Implemented secure subscription tiers and API rate limiting using Redis, integrated with a payment gateway.",
+      "Developed a complete news-to-podcast platform that aggregates articles from RSS feeds, generates intelligent summaries, and produces high-quality audio content.",
+      "Implemented a full-stack architecture with FastAPI backend, React frontend, PostgreSQL database, Redis caching, and RabbitMQ with Celery for async task processing.",
+      "Integrated AI services including DeepSeek for content summarization and Edge TTS for natural-sounding audio generation with multiple voice options.",
+      "Built user authentication with JWT tokens and Google OAuth 2.0, along with a subscription system integrated with Ko-fi for payments.",
+      "Created an admin dashboard for user management, content control, and system operations including news aggregation triggers.",
     ],
-    techStack: ["FastAPI", "React", "RabbitMQ", "Celery", "PostgreSQL", "Redis"],
-    highlights: ["SaaS Architecture", "Async Processing", "GenAI Pipeline"],
+    techStack: [
+      "FastAPI",
+      "React",
+      "TypeScript",
+      "PostgreSQL",
+      "RabbitMQ",
+      "Redis",
+      "Celery",
+      "Docker",
+    ],
+    highlights: [
+      "Full-Stack Application",
+      "AI-Powered Audio",
+      "Async Task Processing",
+    ],
     image: projectEchobrief,
     github: "https://github.com/NaufalHD12/echobrief",
   },
   {
-    slug: "eco-tracker",
-    title: "EcoTracker: Carbon Analytics Engine",
+    slug: "predictive-maintenance-copilot",
+    title: "Predictive Maintenance Copilot",
     summary:
-      "Precision-focused carbon tracking platform featuring complex aggregation pipelines and gamified user engagement mechanics.",
+      "Architected a microservices-based predictive maintenance platform for manufacturing, integrating AI agents for real-time machine health analysis and alerts.",
     description: [
-      "Engineered a precision-focused calculation engine utilizing DEFRA 2024 standards, transforming multi-category inputs into standardized emission metrics.",
-      "Optimized MongoDB aggregation pipelines to process complex time-series data, enabling real-time generation of analytics dashboards.",
-      "Architected a modular gamification system that handles state management for dynamic leaderboards and user retention loops.",
+      "Architected and led the development of a predictive maintenance platform for the manufacturing sector, orchestrating a microservices ecosystem to monitor industrial machine health.",
+      "Implemented real-time event streaming via Socket.IO to deliver critical machine failure alerts and synchronized updates across the dashboard.",
+      "Engineered an Agentic AI service using FastAPI, LangChain, and LangGraph to analyze telemetry data, providing instant root-cause insights and maintenance recommendations.",
     ],
-    techStack: ["React 19", "Node.js", "MongoDB Aggregations", "Redis", "Recharts"],
-    highlights: ["Data Visualization", "Complex Logic", "System Design"],
+    techStack: [
+      "Hapi",
+      "NodeJS",
+      "FastAPI",
+      "LangChain",
+      "LangGraph",
+      "Socket.IO",
+      "TimescaleDB",
+    ],
+    highlights: [
+      "Microservices architecture",
+      "Agentic AI",
+      "Real-time streaming",
+    ],
+    image: projectPredictiveMaintenance,
+    github: "https://github.com/NaufalHD12/predictive-maintenance-copilot",
+  },
+  {
+    slug: "eco-tracker",
+    title: "EcoTracker: Carbon Footprint Tracker",
+    summary:
+      "Built a comprehensive MERN-stack carbon footprint tracker with activity logging, interactive dashboard, community challenges, and educational quizzes.",
+    description: [
+      "Developed a full-stack personal carbon footprint tracking application using React 19, Node.js, Express, and MongoDB with comprehensive feature set.",
+      "Implemented activity logging across 4 categories (Transportation, Food, Energy, Shopping) with accurate emission calculations using DEFRA 2024 emission factors.",
+      "Built an intelligent dashboard with interactive Recharts visualizations, weekly/monthly/yearly statistics, and tree planting equivalent metrics.",
+      "Created community challenges with leaderboards, progress tracking, and badge systems to encourage carbon reduction.",
+      "Integrated educational quizzes with difficulty levels, score tracking, and cooldown systems for consistent learning.",
+    ],
+    techStack: ["React", "Node.js", "Express", "MongoDB", "Redis", "TailwindCSS", "Recharts", "JWT"],
+    highlights: ["Full-Stack MERN", "Interactive Dashboard", "Gamification Features"],
     image: projectEcoTracker,
     github: "https://github.com/NaufalHD12/eco-tracker",
   },
   {
-    slug: "venture-mind",
-    title: "VentureMind: Multi-Agent Business Strategist",
-    summary:
-      "Collaborative multi-agent system utilizing CrewAI to autonomously research and generate comprehensive business strategies.",
-    description: [
-      "Orchestrated a Multi-Agent System (MAS) using CrewAI where distinct AI agents collaborate to perform market research, SWOT analysis, and strategy formulation.",
-      "Integrated a RAG (Retrieval-Augmented Generation) layer with Tavily Search API to ground model outputs in real-time web data.",
-      "Deployed as a containerized service ensuring consistent runtime environments across development and production.",
-    ],
-    techStack: ["CrewAI", "RAG", "FastAPI", "Docker", "PostgreSQL"],
-    highlights: ["Multi-Agent System", "Autonomous Research", "LLM Orchestration"],
-    image: projectVentureMind,
-    github: "https://github.com/NaufalHD12/venture-mind",
-  },
-  {
     slug: "persona-nexus",
-    title: "Persona Nexus: Community Platform",
+    title: "Persona Nexus: AI Community Platform",
     summary:
-      "Full-stack social forum engineered for performance using Server-Side Rendering (SSR) and AI-assisted content moderation.",
+      "Developed a full-stack community platform with AI moderation, real-time features, and DevOps pipeline for seamless social interactions.",
     description: [
-      "Architected a monolithic application using Django and HTMX to achieve Single Page Application (SPA) fluidity with Server-Side Rendering reliability.",
-      "Integrated an AI moderation layer to automatically flag toxic content and assist users in drafting posts.",
-      "Implemented a complete CI/CD pipeline using GitHub Actions for automated testing and deployment to AWS EC2.",
+      "Architected and developed the full-stack web application using Django, HTMX, and Alpine.js.",
+      "Implemented comprehensive social features, including OAuth authentication and real-time notifications.",
+      "Integrated AI functionality for content moderation and writing assistance.",
     ],
-    techStack: ["Django", "HTMX", "AWS EC2", "CI/CD", "PostgreSQL"],
-    highlights: ["Server-Side Rendering", "DevOps", "AI Moderation"],
+    techStack: [
+      "Django",
+      "HTMX",
+      "Alpine.js",
+      "OAuth",
+      "Chart.js",
+      "AWS EC2",
+      "Docker",
+    ],
+    highlights: ["Full-Stack Development", "AI Integration", "DevOps Pipeline"],
     image: projectPersonaNexus,
     github: "https://github.com/NaufalHD12/PersonaNexus",
     demo: "https://www.personanexus.club/",
   },
-   {
-    slug: "synapsis-ai",
-    title: "Synapsis AI: Intelligent ATS Pipeline",
+  {
+    slug: "venture-mind",
+    title: "VentureMind: AI Business Co-Pilot",
     summary:
-      "Automated recruitment tool capable of batch-processing CVs and matching them against job descriptions using LLMs.",
+      "Created a multi-agent AI system for generating business strategies, with RAG integration and asynchronous processing.",
     description: [
-      "Engineered an intelligent document processing pipeline using PyMuPDF and DeepSeek to extract and analyze candidate data from diverse file formats.",
-      "Optimized for batch processing, allowing HR teams to rank hundreds of applicants against job requirements in minutes.",
-      "Built a responsive interface for detailed candidate breakdown and match justification.",
+      "Designed a multi-agent AI system using CrewAI and GPT-4.1-mini for collaborative strategy generation.",
+      "Integrated Retrieval-Augmented Generation with Tavily Search API for real-time market data.",
     ],
-    techStack: ["Python", "Flask", "LLM Engineering", "Pandas", "Document Processing"],
-    highlights: ["Automated Screening", "Batch Processing", "NLP"],
+    techStack: [
+      "CrewAI",
+      "GPT-4.1-mini",
+      "RAG",
+      "FastAPI",
+      "PostgreSQL",
+      "Docker",
+    ],
+    highlights: ["Multi-Agent AI", "RAG Integration", "Async Architecture"],
+    image: projectVentureMind,
+    github: "https://github.com/NaufalHD12/venture-mind",
+    demo: "https://venture-mind-production-531d.up.railway.app/",
+  },
+  {
+    slug: "synapsis-ai",
+    title: "Synapsis AI: CV Screening System",
+    summary:
+      "Engineered an AI-driven recruitment tool for multi-language CV screening with batch processing.",
+    description: [
+      "Engineered an intelligent screening system to analyze job descriptions against CVs simultaneously.",
+      "Developed a multi-language pipeline leveraging DeepSeek for matching scores and analysis.",
+    ],
+    techStack: ["Python", "Flask", "DeepSeek", "PyMuPDF", "Pandas"],
+    highlights: ["AI Screening Pipeline", "Multi-Language", "Batch Processing"],
     image: projectSynapsisAi,
     github: "https://github.com/NaufalHD12/synapsis-ai",
+    demo: "https://synapsis-ai-production.up.railway.app/",
   },
+  {
+    slug: "acnescan",
+    title: "AcneScan: Acne Detection App",
+    summary:
+      "Trained a CNN model for acne classification achieving 98% F1-score and deployed on GCP.",
+    description: [
+      "Designed and trained a CNN image classification model using TensorFlow and EfficientNetB0.",
+      "Built a RESTful API with Flask and deployed it on Google Cloud Platform.",
+    ],
+    techStack: [
+      "TensorFlow",
+      "EfficientNetB0",
+      "Flask",
+      "GCP",
+      "TensorFlow Lite",
+    ],
+    highlights: ["CNN Model Training", "98% F1-Score", "Cloud Deployment"],
+    image: projectAcnescan,
+    github: "https://github.com/Acne-Scan",
+  }
 ];
 
 export const TIMELINE: TimelineItem[] = [
