@@ -451,6 +451,12 @@ export const TIMELINE: TimelineItem[] = [
     description: "Intensive program led by Google, GoTo, and Traveloka, focusing on ML concepts."
   },
   {
+    title: "Member",
+    subtitle: "Google Developer Student Clubs (GDSC) UPI",
+    date: "2023 - 2024",
+    description: "Active member of the developer student community, participating in technical workshops and collaborative events."
+  },
+  {
     title: "Software Engineering Student",
     subtitle: "Universitas Pendidikan Indonesia",
     date: "2022 - Present",
