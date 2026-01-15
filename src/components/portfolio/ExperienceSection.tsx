@@ -8,7 +8,7 @@ export const ExperienceSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="experience" className="section-padding relative" ref={ref}>
+    <section id="journey" className="section-padding relative" ref={ref}>
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <motion.div
@@ -17,10 +17,13 @@ export const ExperienceSection = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <span className="text-primary font-semibold mb-4 block">Career Journey</span>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Experience & <span className="text-gradient">Education</span>
+            <span className="text-primary font-semibold mb-4 block">The Road So Far</span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              My <span className="text-gradient">Journey</span>
             </h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
+              Tracing my path from educational background, training, and professional experiences.
+            </p>
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-12">
