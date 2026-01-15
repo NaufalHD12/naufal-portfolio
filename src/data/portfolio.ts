@@ -221,7 +221,7 @@ export const PROJECTS: Project[] = [
   },
   {
     slug: "predictive-maintenance-copilot",
-    title: "Predictive Maintenance Copilot",
+    title: "Predictive Maintenance Copilot: Use Case By Accenture",
     summary:
       "Architected a microservices-based predictive maintenance platform for manufacturing, integrating AI agents for real-time machine health analysis and alerts.",
     problem: [
