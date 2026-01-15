@@ -37,12 +37,16 @@ export interface Project {
   slug: string;
   title: string;
   summary: string;
-  description: string[];
   techStack: string[];
   highlights: string[];
   image: string;
   github: string;
   demo?: string;
+  problem?: string[];
+  solution?: string[];
+  features?: string[];
+  techImplementation?: string[];
+  lessonsLearned?: string[];
 }
 
 export interface TimelineItem {
@@ -116,7 +120,7 @@ export const SKILLS: SkillCategory[] = [
         { name: "React", icon: SiReact },
         { name: "Tailwind CSS", icon: SiTailwindcss },
         { name: "HTMX", icon: SiHtmx },
-        { name: "Streamlit", icon: SiStreamlit }, 
+        { name: "Streamlit", icon: SiStreamlit },
     ]
   },
   {
@@ -136,12 +140,30 @@ export const PROJECTS: Project[] = [
     title: "EchoBrief: AI News Podcast Platform",
     summary:
       "Built a full-stack application that transforms news articles into AI-generated podcast audio using DeepSeek for summarization and Edge TTS for audio synthesis.",
-    description: [
-      "Developed a complete news-to-podcast platform that aggregates articles from RSS feeds, generates intelligent summaries, and produces high-quality audio content.",
-      "Implemented a full-stack architecture with FastAPI backend, React frontend, PostgreSQL database, Redis caching, and RabbitMQ with Celery for async task processing.",
-      "Integrated AI services including DeepSeek for content summarization and Edge TTS for natural-sounding audio generation with multiple voice options.",
-      "Built user authentication with JWT tokens and Google OAuth 2.0, along with a subscription system integrated with Ko-fi for payments.",
-      "Created an admin dashboard for user management, content control, and system operations including news aggregation triggers.",
+    problem: [
+      "We live in an era of information overload. Staying updated requires visiting multiple websites, scrolling through ads, and dedicating significant time to reading textual content.",
+      "For busy professionals or commuters, finding the time to 'read the news' is becoming increasingly difficult, yet the fear of missing out (FOMO) remains."
+    ],
+    solution: [
+      "EchoBrief bridges the gap between staying informed and being busy. It is a full-stack platform that automatically transforms written news articles into engaging AI-generated podcasts.",
+      "Instead of reading, you can listen. EchoBrief aggregates stories from your favorite sources, summarizes them into a cohesive script, and narrates them using natural-sounding AI voices."
+    ],
+    features: [
+      "AI-Powered Podcasts: Generate personalized news podcasts from your favorite topics",
+      "News Aggregation: Access articles from multiple curated news sources",
+      "Smart Search: Search across articles, topics, and sources",
+      "Personalization: Customize topics, avatar, and preferences",
+      "Admin Dashboard: Comprehensive tools for user management and content control"
+    ],
+    techImplementation: [
+      "Event-Driven Architecture: Built using RabbitMQ & Celery for handling asynchronous background processing tasks like summarization and audio synthesis.",
+      "AI Pipeline Integration: Utilized DeepSeek for intelligent text summarization and Edge TTS for generating high-quality natural-sounding audio.",
+      "High-Performance Backend: Developed with FastAPI to provide robust REST endpoints and manage heavy workloads efficiently.",
+      "Type-Safe Frontend: Constructed with React and TypeScript to ensure a reliable and interactive user interface."
+    ],
+    lessonsLearned: [
+      "Event-Driven Architecture: Migrating from simple background tasks to RabbitMQ + Celery to handle variable AI processing times (30s+) and ensure reliability.",
+      "Optimizing AI Costs: Implementing 'one-shot prompting' for LLMs and Redis Caching to prevent re-summarizing viral articles, significantly reducing API costs."
     ],
     techStack: [
       "FastAPI",
@@ -166,10 +188,30 @@ export const PROJECTS: Project[] = [
     title: "Predictive Maintenance Copilot",
     summary:
       "Architected a microservices-based predictive maintenance platform for manufacturing, integrating AI agents for real-time machine health analysis and alerts.",
-    description: [
-      "Architected and led the development of a predictive maintenance platform for the manufacturing sector, orchestrating a microservices ecosystem to monitor industrial machine health.",
-      "Implemented real-time event streaming via Socket.IO to deliver critical machine failure alerts and synchronized updates across the dashboard.",
-      "Engineered an Agentic AI service using FastAPI, LangChain, and LangGraph to analyze telemetry data, providing instant root-cause insights and maintenance recommendations.",
+    problem: [
+      "Unplanned machine downtime in manufacturing leads to massive revenue loss and safety hazards.",
+      "Traditional maintenance schedules are inefficient, either checking too often (wasteful) or too late (failures)."
+    ],
+    solution: [
+      "A predictive maintenance platform that orchestrates a microservices ecosystem to monitor industrial machine health in real-time.",
+      "It uses AI agents to analyze telemetry data and provide instant root-cause insights and maintenance recommendations."
+    ],
+    features: [
+      "Real-time Alerts: Event streaming via Socket.IO for critical failure alerts",
+      "Root-Cause Analysis: Agentic AI service to analyze telemetry data",
+      "Microservices Architecture: Scalable system design for independent scaling",
+      "Interactive Dashboard: Real-time monitoring of industrial machine health"
+    ],
+    techImplementation: [
+      "Microservices Ecosystem: Orchestrated multiple specialized services (Frontend, Main Backend, ML Service, LLM Agent) for independent scaling and maintenance.",
+      "Real-time Telemetry: Implemented WebSocket (Socket.IO) to stream machine health data and deliver instant alerts to the dashboard.",
+      "Hybrid ML Model: Deployed a service combining Anomaly Detection and Classification models using Scikit-learn and XGBoost within Docker containers.",
+      "Agentic AI: Engineered a ReAct-based AI assistant using LangGraph that can autonomously analyze data and execute maintenance workflows.",
+      "Data Infrastructure: Utilized TimescaleDB for efficient storage of high-frequency time-series telemetry data."
+    ],
+    lessonsLearned: [
+      "Microservices Complexity: Managing communication between services required robust error handling and eventual consistency patterns.",
+      "Real-time Data Handling: Optimizing Socket.IO for high-frequency telemetry data streams."
     ],
     techStack: [
       "Hapi",
@@ -181,9 +223,9 @@ export const PROJECTS: Project[] = [
       "TimescaleDB",
     ],
     highlights: [
-      "Microservices architecture",
+      "Microservices Architecture",
       "Agentic AI",
-      "Real-time streaming",
+      "Real-time Streaming",
     ],
     image: projectPredictiveMaintenance,
     github: "https://github.com/NaufalHD12/predictive-maintenance-copilot",
@@ -193,12 +235,29 @@ export const PROJECTS: Project[] = [
     title: "EcoTracker: Carbon Footprint Tracker",
     summary:
       "Built a comprehensive MERN-stack carbon footprint tracker with activity logging, interactive dashboard, community challenges, and educational quizzes.",
-    description: [
-      "Developed a full-stack personal carbon footprint tracking application using React 19, Node.js, Express, and MongoDB with comprehensive feature set.",
-      "Implemented activity logging across 4 categories (Transportation, Food, Energy, Shopping) with accurate emission calculations using DEFRA 2024 emission factors.",
-      "Built an intelligent dashboard with interactive Recharts visualizations, weekly/monthly/yearly statistics, and tree planting equivalent metrics.",
-      "Created community challenges with leaderboards, progress tracking, and badge systems to encourage carbon reduction.",
-      "Integrated educational quizzes with difficulty levels, score tracking, and cooldown systems for consistent learning.",
+    problem: [
+      "Many individuals want to reduce their carbon footprint but lack the tools to measure it accurately or the motivation to sustain habit changes.",
+      "Existing tools often lack engagement or actionable insights."
+    ],
+    solution: [
+      "EcoTracker is a comprehensive MERN-stack application that combines tracking with gamification.",
+      "It features activity logging, accurate emission calculations detailed dashboards, and community challenges to drive engagement."
+    ],
+    features: [
+      "Activity Logging: Track emissions across Transportation, Food, Energy, and Shopping using DEFRA 2024 factors",
+      "Interactive Dashboard: Visualize weekly, monthly, and yearly statistics with Recharts",
+      "Gamification: Engage with community challenges, leaderboards, and badge systems",
+      "Educational Quizzes: Learn about sustainability with difficulty levels and score tracking"
+    ],
+    techImplementation: [
+      "MERN Stack Architecture: Built a monolithic full-stack application using MongoDB, Express, React 19, and Node.js for seamless JavaScript development.",
+      "Performance Optimization: Integrated Upstash Redis for API rate limiting and efficient caching of leaderboard data.",
+      "Security Best Practices: Implemented robust authentication using JWT encryption and comprehensive input validation with Zod and Joi.",
+      "Interactive Visualization: Utilized Recharts to render complex carbon footprint data into intuitive and responsive charts."
+    ],
+    lessonsLearned: [
+      "Gamification Logic: Designing balanced challenge and point systems to keep users motivated.",
+      "Data Visualization: Using Recharts to make complex emission data easy to understand."
     ],
     techStack: ["React", "Node.js", "Express", "MongoDB", "Redis", "TailwindCSS", "Recharts", "JWT"],
     highlights: ["Full-Stack MERN", "Interactive Dashboard", "Gamification Features"],
@@ -210,10 +269,29 @@ export const PROJECTS: Project[] = [
     title: "Persona Nexus: AI Community Platform",
     summary:
       "Developed a full-stack community platform with AI moderation, real-time features, and DevOps pipeline for seamless social interactions.",
-    description: [
-      "Architected and developed the full-stack web application using Django, HTMX, and Alpine.js.",
-      "Implemented comprehensive social features, including OAuth authentication and real-time notifications.",
-      "Integrated AI functionality for content moderation and writing assistance.",
+    problem: [
+      "Online communities often suffer from toxic content and lack of engagement.",
+      "Building a scalable social platform requires handling complex real-time interactions and content safety."
+    ],
+    solution: [
+      "Persona Nexus is a full-stack community platform that uses AI for content moderation and writing assistance.",
+      "It provides real-time notifications and smooth social interactions."
+    ],
+    features: [
+      "AI Content Moderation: Automated toxicity detection and writing assistance",
+      "Real-time Notifications: Instant alerts for interaction and activity",
+      "OAuth Authentication: Secure login via third-party providers",
+      "Interactive Feed: Smooth social interactions built with HTMX"
+    ],
+    techImplementation: [
+      "Modern Monolithic Architecture: Built with Django following the MVT pattern, served via Gunicorn and Nginx on AWS EC2.",
+      "Dynamic Interactivity: Leveraged HTMX and Alpine.js to deliver SPA-like user experiences and real-time features without the complexity of a separate frontend app.",
+      "Cloud Infrastructure: Automated deployment using GitHub Actions CI/CD to AWS EC2, with static files managed via AWS S3.",
+      "AI-Powered Operations: Integrated DeepSeek API for automated content toxicity detection and intelligent post writing assistance."
+    ],
+    lessonsLearned: [
+      "HTMX Integration: Learned how to build dynamic interfaces server-side, reducing JS bloat.",
+      "DevOps: Setting up a CI/CD pipeline for Django on AWS."
     ],
     techStack: [
       "Django",
@@ -234,9 +312,29 @@ export const PROJECTS: Project[] = [
     title: "VentureMind: AI Business Co-Pilot",
     summary:
       "Created a multi-agent AI system for generating business strategies, with RAG integration and asynchronous processing.",
-    description: [
-      "Designed a multi-agent AI system using CrewAI and GPT-4.1-mini for collaborative strategy generation.",
-      "Integrated Retrieval-Augmented Generation with Tavily Search API for real-time market data.",
+    problem: [
+      "Entrepreneurs often face decision paralysis and tunnel vision. Developing a comprehensive business strategy requires diverse expertise—market trends, risk assessment, and operational planning—which is rarely found in a single person.",
+      "Hiring a professional advisory board is cost-prohibitive for early-stage startups, leading many brilliant ideas to fail due to lack of validation."
+    ],
+    solution: [
+      "VentureMind leverages a multi-agent AI system to think, debate, and create. It acts as an autonomous 'AI Board of Directors' that analyzes your business idea from multiple angles.",
+      "Input your idea, and our team of intelligent agents (The Visionary, Market Analyst, Critic, Planner) collaborate to craft a comprehensive strategic report."
+    ],
+    features: [
+      "Multi-Agent Collaboration: Specialized agents work together to analyze concepts from unique angles.",
+      "Real-Time Analysis Log: Watch the thought process in real-time as agents research and debate.",
+      "Smart Memory System: Access full history and use past reports as context for future queries.",
+      "Live Market Data: Integrated Tavily Search API ensures strategy is based on real-time web data.",
+      "Interactive Q&A: Chat with a specialized agent that knows your specific strategy report."
+    ],
+    techImplementation: [
+      "Multi-Agent Orchestration: Designed a CrewAI workflow where specialized agents (Visionary, Analyst, Critic) collaborate to produce comprehensive strategies.",
+      "Retrieval-Augmented Generation (RAG): Integrated Tavily Search API to ground agent outputs in real-time market data, ensuring relevance and accuracy.",
+      "Asynchronous Streaming: Implemented FastAPI StreamingResponse with Python generators to stream agent thoughts in real-time to the client."
+    ],
+    lessonsLearned: [
+      "Serverless Timeouts: Solved 'Connection Reset' errors on Railway by implementing a Keep-Alive Streaming pattern for long-running AI tasks.",
+      "Prompt Engineering: Learned that assigning highly specific personas (e.g., 'ruthless critic') is key to preventing agents from being too polite."
     ],
     techStack: [
       "CrewAI",
@@ -256,9 +354,29 @@ export const PROJECTS: Project[] = [
     title: "Synapsis AI: CV Screening System",
     summary:
       "Engineered an AI-driven recruitment tool for multi-language CV screening with batch processing.",
-    description: [
-      "Engineered an intelligent screening system to analyze job descriptions against CVs simultaneously.",
-      "Developed a multi-language pipeline leveraging DeepSeek for matching scores and analysis.",
+    problem: [
+      "HR teams spend countless hours manually screening CVs, leading to fatigue and potential bias.",
+      "Matching candidates to technical job descriptions requires deep understanding of skills that simple keyword matchers miss."
+    ],
+    solution: [
+      "Synapsis AI automates the screening process using Large Language Models.",
+      "It analyzes Job Descriptions and batches of CVs simultaneously, providing match scores, highlights, and deep analysis."
+    ],
+    features: [
+      "Match Scoring: AI-driven analysis of candidate suitability",
+      "Batch Processing: Support for mass upload and simultaneous analysis",
+      "Multi-language Support: Detects and processes CVs in Indonesian and English",
+      "Excel Reports: Export detailed analysis results in professional format"
+    ],
+    techImplementation: [
+      "Backend Architecture: Developed a Python Flask application to serve as the core processing engine for recruitment documents.",
+      "Document Processing: Implemented PyMuPDF for precise PDF text extraction to handle various CV formats.",
+      "AI Integration: Integrated DeepSeek-V3 API to perform semantic analysis and matching between CVs and Job Descriptions.",
+      "Report Generation: Utilized Pandas and Openpyxl to process analysis results and generate downloadable Excel reports."
+    ],
+    lessonsLearned: [
+      "PDF Extraction: Handling various CV formats and layouts to ensure accurate text retrieval.",
+      "Prompt Optimization: Fine-tuning prompts to get consistent JSON outputs for scoring."
     ],
     techStack: ["Python", "Flask", "DeepSeek", "PyMuPDF", "Pandas"],
     highlights: ["AI Screening Pipeline", "Multi-Language", "Batch Processing"],
@@ -271,9 +389,28 @@ export const PROJECTS: Project[] = [
     title: "AcneScan: Acne Detection App",
     summary:
       "Trained a CNN model for acne classification achieving 98% F1-score and deployed on GCP.",
-    description: [
-      "Designed and trained a CNN image classification model using TensorFlow and EfficientNetB0.",
-      "Built a RESTful API with Flask and deployed it on Google Cloud Platform.",
+    problem: [
+      "Accurate self-diagnosis of skin conditions can be difficult.",
+      "Access to dermatological advice is not always immediate or affordable."
+    ],
+    solution: [
+      "AcneScan provides an instant, AI-based classification of acne types.",
+      "It uses a trained CNN model to analyze images and provide results with high accuracy."
+    ],
+    features: [
+      "Image Classification: AI-based classification of acne types from images",
+      "High Accuracy: Achieved 98% F1-score using EfficientNetB0",
+      "Mobile-friendly API: Lightweight RESTful endpoints for easy integration"
+    ],
+    techImplementation: [
+      "Model Architecture: Trained an EfficientNetB0 Convolutional Neural Network (CNN) using TensorFlow with Transfer Learning for high-accuracy detection.",
+      "Model Optimization: Achieved 98% F1-score through rigorous training and tuning, and converted the model to TensorFlow Lite for edge usage.",
+      "Cloud Serving: Dockerized the Flask API and deployed it to Google Cloud Platform (Cloud Run) for scalable serverless inference.",
+      "Mobile Integration: Exposed RESTful APIs to communicate with the Android mobile application for real-time analysis."
+    ],
+    lessonsLearned: [
+      "Model Tuning: Techniques to achieve high accuracy on medical imaging data.",
+      "Cloud Deployment: Configuring GCP for serving ML models."
     ],
     techStack: [
       "TensorFlow",
