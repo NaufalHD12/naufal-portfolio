@@ -1,14 +1,24 @@
 import { useParams, Link } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
+import useEmblaCarousel from "embla-carousel-react";
 import { PROJECTS } from "@/data/portfolio";
-import { ArrowLeft, Github, ExternalLink, CheckCircle2, AlertTriangle, Lightbulb, Cpu, BookOpen } from "lucide-react";
+import { ArrowLeft, Github, ExternalLink, CheckCircle2, AlertTriangle, Lightbulb, Cpu, BookOpen, ChevronLeft, ChevronRight } from "lucide-react";
 import { Navbar } from "@/components/portfolio/Navbar";
 import { Footer } from "@/components/portfolio/Footer";
 
 const ProjectDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const project = PROJECTS.find((p) => p.slug === slug);
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
 
   // Prevent scroll restoration that might cause scrolling to bottom
   useEffect(() => {
@@ -51,18 +61,53 @@ const ProjectDetail = () => {
             </motion.div>
 
             {/* Project Image */}
+            {/* Project Image or Carousel */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="relative rounded-2xl overflow-hidden mb-12"
+              className="relative rounded-2xl overflow-hidden mb-12 group"
             >
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-64 md:h-80 object-contain"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+              {project.images && project.images.length > 0 ? (
+                <div className="relative">
+                  <div className="overflow-hidden" ref={emblaRef}>
+                    <div className="flex">
+                      {project.images.map((img, index) => (
+                        <div className="flex-[0_0_100%] min-w-0 relative" key={index}>
+                           <img
+                            src={img}
+                            alt={`${project.title} - Screenshot ${index + 1}`}
+                            className="w-full h-64 md:h-[500px] object-cover md:object-contain bg-black/5"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  {/* Navigation Buttons */}
+                  <button
+                    className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center shadow-lg opacity-0 group-hover:opacity-100 transition-opacity disabled:opacity-0"
+                    onClick={scrollPrev}
+                  >
+                    <ChevronLeft size={20} />
+                  </button>
+                  <button
+                    className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center shadow-lg opacity-0 group-hover:opacity-100 transition-opacity disabled:opacity-0"
+                    onClick={scrollNext}
+                  >
+                     <ChevronRight size={20} />
+                  </button>
+                </div>
+              ) : (
+                <div className="relative">
+                   <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-64 md:h-80 object-contain"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent pointer-events-none" />
+                </div>
+              )}
             </motion.div>
 
             {/* Project Header */}

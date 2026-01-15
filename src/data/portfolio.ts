@@ -9,18 +9,42 @@ import { TbBrandCSharp } from "react-icons/tb";
 import { IconType } from "react-icons";
 
 // Project images
-import projectPredictiveMaintenance from "@/assets/project-predictive-maintenance.webp";
-import projectEcoTracker from "@/assets/project-eco-tracker.webp";
-import projectPersonaNexus from "@/assets/project-persona-nexus.webp";
-import projectVentureMind from "@/assets/project-venture-mind.webp";
-import projectSynapsisAi from "@/assets/project-synapsis-ai.webp";
-import projectAcnescan from "@/assets/project-acnescan.webp";
+import projectPredictiveMaintenance from "@/assets/predictive-maintenance/project-predictive-maintenance1.webp";
+import projectEcoTracker from "@/assets/eco-tracker/project-eco-tracker1.webp";
+import projectPersonaNexus from "@/assets/persona-nexus/project-persona-nexus1.webp";
+import projectVentureMind from "@/assets/venture-mind/project-venture-mind1.webp";
+import projectSynapsisAi from "@/assets/synapsis-ai/project-synapsis-ai1.webp";
+import projectAcnescan from "@/assets/acnescan/project-acnescan.webp";
 import projectTweetsSentiment from "@/assets/project-tweets-sentiment-analysis.webp";
 import projectAnimeRecommendation from "@/assets/project-anime-recommendation-system.webp";
 import projectStudentPerformance from "@/assets/project-student-performance-predictor.webp";
 import projectEcommerceDashboard from "@/assets/project-ecommerce-public-dashboard.webp";
 import projectBikeSharing from "@/assets/project-bike-sharing-dashboard.webp";
-import projectEchobrief from "@/assets/project-echobrief.webp";
+import projectEchobrief from "@/assets/echobrief/project-echobrief1.webp";
+
+// EchoBrief Gallery
+import echoBrief1 from "@/assets/echobrief/project-echobrief1.webp";
+import echoBrief2 from "@/assets/echobrief/project-echobrief2.webp";
+import echoBrief3 from "@/assets/echobrief/project-echobrief3.webp";
+import echoBrief4 from "@/assets/echobrief/project-echobrief4.webp";
+import echoBrief5 from "@/assets/echobrief/project-echobrief5.webp";
+import echoBrief6 from "@/assets/echobrief/project-echobrief6.webp";
+import echoBrief7 from "@/assets/echobrief/project-echobrief7.webp";
+import echoBrief8 from "@/assets/echobrief/project-echobrief8.webp";
+
+// EcoTracker Gallery
+import ecoTracker1 from "@/assets/eco-tracker/project-eco-tracker1.webp";
+import ecoTracker2 from "@/assets/eco-tracker/project-eco-tracker2.webp";
+import ecoTracker3 from "@/assets/eco-tracker/project-eco-tracker3.webp";
+import ecoTracker4 from "@/assets/eco-tracker/project-eco-tracker4.webp";
+import ecoTracker5 from "@/assets/eco-tracker/project-eco-tracker5.webp";
+
+// Predictive Maintenance Gallery
+import pmc1 from "@/assets/predictive-maintenance/project-predictive-maintenance1.webp";
+import pmc2 from "@/assets/predictive-maintenance/project-predictive-maintenance2.webp";
+import pmc3 from "@/assets/predictive-maintenance/project-predictive-maintenance3.webp";
+import pmc4 from "@/assets/predictive-maintenance/project-predictive-maintenance4.webp";
+import pmc5 from "@/assets/predictive-maintenance/project-predictive-maintenance5.webp";
 
 
 export interface Skill {
@@ -40,6 +64,7 @@ export interface Project {
   techStack: string[];
   highlights: string[];
   image: string;
+  images?: string[];
   github: string;
   demo?: string;
   problem?: string[];
@@ -180,7 +205,18 @@ export const PROJECTS: Project[] = [
       "Background Processing",
       "AI-Powered Audio",
     ],
+
     image: projectEchobrief,
+    images: [
+      echoBrief1,
+      echoBrief2,
+      echoBrief3,
+      echoBrief4,
+      echoBrief5,
+      echoBrief6,
+      echoBrief7,
+      echoBrief8
+    ],
     github: "https://github.com/NaufalHD12/echobrief",
   },
   {
@@ -228,6 +264,13 @@ export const PROJECTS: Project[] = [
       "Real-time Streaming",
     ],
     image: projectPredictiveMaintenance,
+    images: [
+      pmc1,
+      pmc2,
+      pmc3,
+      pmc4,
+      pmc5
+    ],
     github: "https://github.com/NaufalHD12/predictive-maintenance-copilot",
   },
   {
@@ -262,6 +305,13 @@ export const PROJECTS: Project[] = [
     techStack: ["React", "Node.js", "Express", "MongoDB", "Redis", "TailwindCSS", "Recharts", "JWT"],
     highlights: ["Full-Stack MERN", "Interactive Dashboard", "Gamification Features"],
     image: projectEcoTracker,
+    images: [
+      ecoTracker1,
+      ecoTracker2,
+      ecoTracker3,
+      ecoTracker4,
+      ecoTracker5
+    ],
     github: "https://github.com/NaufalHD12/eco-tracker",
   },
   {
