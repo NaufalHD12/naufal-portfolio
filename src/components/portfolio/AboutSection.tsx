@@ -33,16 +33,10 @@ export const AboutSection = () => {
                 <span className="text-gradient">Intelligent Systems</span>
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                Software Engineer specializing in backend & AI engineering.
-                Skilled in building scalable systems, AI-powered automation
-                tools, and full-stack web applications using Python, Node.js,
-                and ASP.NET.
+                student with strong hands-on experience in building full-stack systems and AI-driven applications through internships and industry-backed projects. Experienced in developing production-ready web services using Python, Node.js, and ASP.NET, with exposure to cloud deployment and modern DevOps workflows. Eager to grow as a software engineer and contribute to real-world systems.
               </p>
               <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-                Experienced in deploying microservices, implementing DevOps
-                workflows, and integrating LLM-based agents into real-world
-                applications. Quick to learn and adapt, excelling both
-                independently and in team environments.
+                Quick to learn and adapt, excelling both independently and in team environments.
               </p>
 
               <div className="flex flex-wrap gap-4">
