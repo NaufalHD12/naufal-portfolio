@@ -478,9 +478,9 @@ export const PROJECTS: Project[] = [
 export const TIMELINE: TimelineItem[] = [
   {
     title: "React & Backend with AI",
-    subtitle: "Asah led by Dicoding Association with Accenture",
-    date: "Aug 2025 - Present",
-    description: "Advanced program focused on full-stack development with React, backend technologies, and AI integration."
+    subtitle: "Asah 2025",
+    date: "Aug 2025 - Jan 2026",
+    description: "Advanced program led by Dicoding Association with Accenture. focused on full-stack development and AI integration."
   },
   {
     title: "Software Engineer Intern",
@@ -507,7 +507,7 @@ export const TIMELINE: TimelineItem[] = [
     description: "Active member of the developer student community, participating in technical workshops and collaborative events."
   },
   {
-    title: "Software Engineering Student",
+    title: "Software Engineering Student | GPA 3.81",
     subtitle: "Universitas Pendidikan Indonesia",
     date: "2022 - Present",
     description: "Bachelor's degree focusing on Backend & AI Engineering."
