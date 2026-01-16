@@ -33,7 +33,7 @@ export const AboutSection = () => {
                 <span className="text-gradient">Intelligent Systems</span>
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                student with strong hands-on experience in building full-stack systems and AI-driven applications through internships and industry-backed projects. Experienced in developing production-ready web services using Python, Node.js, and ASP.NET, with exposure to cloud deployment and modern DevOps workflows. Eager to grow as a software engineer and contribute to real-world systems.
+                Software Engineer with strong hands-on experience in building full-stack systems and AI-driven applications through internships and industry-backed projects. Experienced in developing production-ready web services using Python, Node.js, and ASP.NET, with exposure to cloud deployment and modern DevOps workflows. Eager to grow as a software engineer and contribute to real-world systems.
               </p>
               <p className="text-muted-foreground text-lg leading-relaxed mb-8">
                 Quick to learn and adapt, excelling both independently and in team environments.
