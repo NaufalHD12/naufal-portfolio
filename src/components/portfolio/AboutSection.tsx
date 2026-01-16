@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { Code2, Brain, Server, Zap } from "lucide-react";
 
 const highlights = [
-  { icon: Server, label: "Backend Development", description: "Building robust APIs & microservices" },
+  { icon: Server, label: "Backend Development", description: "Robust server-side solutions" },
   { icon: Brain, label: "AI & Machine Learning", description: "Creating intelligent solutions" },
   { icon: Code2, label: "Full-Stack Capable", description: "End-to-end development" },
   { icon: Zap, label: "High Performance", description: "Optimized & scalable systems" },
