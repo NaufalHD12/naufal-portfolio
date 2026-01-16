@@ -352,6 +352,7 @@ export const PROJECTS: Project[] = [
       "AWS EC2",
       "AWS S3",
       "AWS IAM",
+      "AWS RDS",
       "Docker",
     ],
     highlights: ["Full-Stack Development", "AI Integration", "DevOps Pipeline"],
