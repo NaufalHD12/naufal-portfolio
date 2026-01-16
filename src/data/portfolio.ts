@@ -483,16 +483,16 @@ export const TIMELINE: TimelineItem[] = [
     description: "Advanced program focused on full-stack development with React, backend technologies, and AI integration."
   },
   {
-    title: "Project-Based Virtual Intern: Data Scientist",
-    subtitle: "Home Credit Indonesia",
-    date: "Feb 2025 – Mar 2025",
-    description: "Developed credit scoring models achieving 96% accuracy and executed end-to-end data science workflow."
-  },
-  {
     title: "Software Engineer Intern",
     subtitle: "PT Kilang Pertamina Internasional",
     date: "Feb 2025 – May 2025",
     description: "Engineered RAG pipelines for document automation and built internal .NET enterprise tools."
+  },
+  {
+    title: "Project-Based Virtual Intern: Data Scientist",
+    subtitle: "Home Credit Indonesia",
+    date: "Feb 2025 – Mar 2025",
+    description: "Developed credit scoring models achieving 96% accuracy and executed end-to-end data science workflow."
   },
   {
     title: "Machine Learning",
