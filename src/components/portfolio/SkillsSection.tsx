@@ -30,7 +30,7 @@ export const SkillsSection = () => {
               My <span className="text-gradient">Tech Stack</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              A comprehensive toolkit spanning backend development, AI/ML, cloud infrastructure, and modern web technologies.
+              A comprehensive toolkit spanning web development, AI/ML, cloud infrastructure, and other modern technologies.
             </p>
           </motion.div>
 
