@@ -294,8 +294,8 @@ export const PROJECTS: Project[] = [
     ],
     techImplementation: [
       "MERN Stack Architecture: Built a monolithic full-stack application using MongoDB, Express, React 19, and Node.js for seamless JavaScript development.",
-      "Performance Optimization: Integrated Upstash Redis for API rate limiting and efficient caching of leaderboard data.",
-      "Security Best Practices: Implemented robust authentication using JWT encryption and comprehensive input validation with Zod and Joi.",
+      "Performance Optimization: Integrated Redis for API rate limiting and efficient caching of leaderboard data.",
+      "Security Best Practices: Implemented robust authentication using JWT encryption and comprehensive input validation with Joi.",
       "Interactive Visualization: Utilized Recharts to render complex carbon footprint data into intuitive and responsive charts."
     ],
     lessonsLearned: [
