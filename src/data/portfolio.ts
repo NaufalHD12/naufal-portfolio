@@ -233,10 +233,10 @@ export const PROJECTS: Project[] = [
       "It uses AI agents to analyze telemetry data and provide instant root-cause insights and maintenance recommendations."
     ],
     features: [
-      "Real-time Alerts: Event streaming via Socket.IO for critical failure alerts",
-      "Root-Cause Analysis: Agentic AI service to analyze telemetry data",
-      "Microservices Architecture: Scalable system design for independent scaling",
-      "Interactive Dashboard: Real-time monitoring of industrial machine health"
+      "Instant Failure Alerts: Get immediate notifications when machine anomalies are detected to prevent downtime",
+      "Root-Cause Analysis: Expert-level AI analysis that explains why a machine is failing and how to fix it",
+      "High-Availability Design: Built to handle continuous industrial data streams without interruption",
+      "Interactive Health Dashboard: A centralized visual control center for monitoring all industrial assets in real-time"
     ],
     techImplementation: [
       "Microservices Ecosystem: Orchestrated multiple specialized services (Frontend, Main Backend, ML Service, LLM Agent) for independent scaling and maintenance.",
@@ -287,10 +287,10 @@ export const PROJECTS: Project[] = [
       "It features activity logging, accurate emission calculations detailed dashboards, and community challenges to drive engagement."
     ],
     features: [
-      "Activity Logging: Track emissions across Transportation, Food, Energy, and Shopping using DEFRA 2024 factors",
-      "Interactive Dashboard: Visualize weekly, monthly, and yearly statistics with Recharts",
-      "Gamification: Engage with community challenges, leaderboards, and badge systems",
-      "Educational Quizzes: Learn about sustainability with difficulty levels and score tracking"
+      "Personalized Emission Tracking: Log your daily activities across transport, food, and energy to see your impact",
+      "Visual Progress Insights: Clear, intuitive charts that show your environmental trends over weeks and months",
+      "Social Challenges: Join community missions and compete on leaderboards to stay motivated",
+      "Eco-Education: Fun, interactive quizzes to test and expand your sustainability knowledge"
     ],
     techImplementation: [
       "MERN Stack Architecture: Built a monolithic full-stack application using MongoDB, Express, React 19, and Node.js for seamless JavaScript development.",
@@ -328,10 +328,10 @@ export const PROJECTS: Project[] = [
       "It provides real-time notifications and smooth social interactions."
     ],
     features: [
-      "AI Content Moderation: Automated toxicity detection and writing assistance",
-      "Real-time Notifications: Instant alerts for interaction and activity",
-      "OAuth Authentication: Secure login via third-party providers",
-      "Interactive Feed: Smooth social interactions built with HTMX"
+      "AI-Guard Safety: Automated content moderation that keeps the community positive and healthy",
+      "Instant Engagement: Never miss a beat with real-time updates on activity and interactions",
+      "Easy Social Access: Secure and quick login using your favorite social media accounts",
+      "Seamless Interface: A lightning-fast, modern feed experience that makes social interaction effortless"
     ],
     techImplementation: [
       "Modern Monolithic Architecture: Built with Django following the MVT pattern, served via Gunicorn and Nginx on AWS EC2.",
@@ -374,11 +374,11 @@ export const PROJECTS: Project[] = [
       "Input your idea, and our team of intelligent agents (The Visionary, Market Analyst, Critic, Planner) collaborate to craft a comprehensive strategic report."
     ],
     features: [
-      "Multi-Agent Collaboration: Specialized agents work together to analyze concepts from unique angles.",
-      "Real-Time Analysis Log: Watch the thought process in real-time as agents research and debate.",
-      "Smart Memory System: Access full history and use past reports as context for future queries.",
-      "Live Market Data: Integrated Tavily Search API ensures strategy is based on real-time web data.",
-      "Interactive Q&A: Chat with a specialized agent that knows your specific strategy report."
+      "AI Board of Directors: Get professional strategy analysis from multiple AI 'experts' who collaborate on your idea",
+      "Transparent AI Reasoning: Watch the agents' thought process in real-time as they research and debate your plan",
+      "Deep Context Memory: The AI remembers your project's history and uses it to provide smarter future advice",
+      "Real-World News & Trends: Strategies are grounded in up-to-the-minute market data and live web research",
+      "Interactive Strategy Q&A: Deep-dive into your report by chatting with an AI that knows your business inside out"
     ],
     techImplementation: [
       "Multi-Agent Orchestration: Designed a CrewAI workflow where specialized agents (Visionary, Analyst, Critic) collaborate to produce comprehensive strategies.",
@@ -416,10 +416,10 @@ export const PROJECTS: Project[] = [
       "It analyzes Job Descriptions and batches of CVs simultaneously, providing match scores, highlights, and deep analysis."
     ],
     features: [
-      "Match Scoring: AI-driven analysis of candidate suitability",
-      "Batch Processing: Support for mass upload and simultaneous analysis",
-      "Multi-language Support: Detects and processes CVs in Indonesian and English",
-      "Excel Reports: Export detailed analysis results in professional format"
+      "Smart Candidate Ranking: Instant suitablity analysis that highlights the best talent based on skill depth, not just keywords",
+      "Mass Resume Processing: Upload hundreds of CVs at once and get a complete analysis in minutes",
+      "Global Talent Support: Automatically detects and accurately screens resumes in both English and Indonesian",
+      "Professional Insights Export: Generate detailed, boardroom-ready Excel reports for easy sharing with the hiring team"
     ],
     techImplementation: [
       "Backend Architecture: Developed a Python Flask application to serve as the core processing engine for recruitment documents.",
@@ -439,7 +439,7 @@ export const PROJECTS: Project[] = [
   },
   {
     slug: "acnescan",
-    title: "AcneScan: Acne Detection App",
+    title: "AcneScan: Acne Detection & Skincare Recommendation App",
     summary:
       "Trained a CNN model for acne classification achieving 98% F1-score and deployed on GCP.",
     problem: [
@@ -451,9 +451,10 @@ export const PROJECTS: Project[] = [
       "It uses a trained CNN model to analyze images and provide results with high accuracy."
     ],
     features: [
-      "Image Classification: AI-based classification of acne types from images",
-      "High Accuracy: Achieved 98% F1-score using EfficientNetB0",
-      "Mobile-friendly API: Lightweight RESTful endpoints for easy integration"
+      "Instant Skin Analysis: Snap a photo and get an immediate classification of your acne type",
+      "Professional-Grade Accuracy: High-performance AI tuned for reliable and precise skin condition detection",
+      "Lightning-Fast Results: Built for speed, providing deep analysis in seconds right on your mobile device",
+      "Personalized Recommendations: AI-based recommendations for skincare products based on acne type"
     ],
     techImplementation: [
       "Model Architecture: Trained an EfficientNetB0 Convolutional Neural Network (CNN) using TensorFlow with Transfer Learning for high-accuracy detection.",

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useLocation, Link } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useActiveSection } from "@/hooks/use-active-section";
@@ -15,6 +15,7 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
   
   // Get section IDs from navLinks
   const sectionIds = navLinks.map(link => link.href.replace('#', ''));
@@ -32,8 +33,8 @@ export const Navbar = () => {
   // Handle navigation based on current page
   const handleNavClick = (href: string) => {
     if (isProjectDetail) {
-      // Navigate to main page with the section
-      window.location.href = `/${href}`;
+      // Navigate to main page with hash
+      navigate(`/${href}`);
     } else {
       // Smooth scroll to section on current page
       const element = document.querySelector(href);
