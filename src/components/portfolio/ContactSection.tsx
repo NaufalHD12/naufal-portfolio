@@ -68,7 +68,6 @@ export const ContactSection = () => {
           >
             {[
               { icon: Github, href: SOCIALS.github, label: "GitHub" },
-              { icon: Linkedin, href: SOCIALS.linkedin, label: "LinkedIn" },
               { icon: Instagram, href: SOCIALS.instagram, label: "Instagram" },
             ].map((social) => (
               <motion.a
