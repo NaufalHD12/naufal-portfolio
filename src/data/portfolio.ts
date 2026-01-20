@@ -233,13 +233,13 @@ export const PROJECTS: Project[] = [
       "It uses AI agents to analyze telemetry data and provide instant root-cause insights and maintenance recommendations."
     ],
     features: [
-      "Instant Failure Alerts: Get immediate notifications when machine anomalies are detected to prevent downtime",
-      "Root-Cause Analysis: Expert-level AI analysis that explains why a machine is failing and how to fix it",
-      "High-Availability Design: Built to handle continuous industrial data streams without interruption",
-      "Interactive Health Dashboard: A centralized visual control center for monitoring all industrial assets in real-time"
+      "Real-time Dashboard: Visual overview of machine health and aggregate statistics",
+      "Predictive Alerts: Instant notifications when machine status enters warning or critical states",
+      "Automated Maintenance Tickets: Seamless workflow that creates tickets based on AI predictions",
+      "Intelligent AI Assistant: Natural language interface for querying machine metrics and maintenance history"
     ],
     techImplementation: [
-      "Microservices Ecosystem: Orchestrated multiple specialized services (Frontend, Main Backend, ML Service, LLM Agent) for independent scaling and maintenance.",
+      "Microservices Architecture: Orchestrated multiple specialized services (Frontend, Main Backend, ML Service, LLM Agent) for independent scaling and maintenance.",
       "Real-time Telemetry: Implemented WebSocket (Socket.IO) to stream machine health data and deliver instant alerts to the dashboard.",
       "Hybrid ML Model: Deployed a service combining Anomaly Detection and Classification models using Scikit-learn and XGBoost within Docker containers.",
       "Agentic AI: Engineered a ReAct-based AI assistant using LangGraph that can autonomously analyze data and execute maintenance workflows.",
@@ -287,16 +287,17 @@ export const PROJECTS: Project[] = [
       "It features activity logging, accurate emission calculations detailed dashboards, and community challenges to drive engagement."
     ],
     features: [
-      "Personalized Emission Tracking: Log your daily activities across transport, food, and energy to see your impact",
-      "Visual Progress Insights: Clear, intuitive charts that show your environmental trends over weeks and months",
-      "Social Challenges: Join community missions and compete on leaderboards to stay motivated",
-      "Eco-Education: Fun, interactive quizzes to test and expand your sustainability knowledge"
+      "Activity Logging: Effortlessly track daily emissions across transportation, food, energy, and shopping",
+      "Interactive Dashboard: Visualize your carbon footprint trends with easy-to-read charts",
+      "Community Challenges: Join local initiatives to compete for top rankings and earn badges",
+      "Educational Quizzes: Learn about sustainability through engaging quizzes with multiple difficulty levels"
     ],
     techImplementation: [
       "MERN Stack Architecture: Built a monolithic full-stack application using MongoDB, Express, React 19, and Node.js for seamless JavaScript development.",
+      "Emission Calculation Engine: Integrated DEFRA 2024 emission factors for precise carbon footprint mapping.",
+      "Interactive Visualization: Utilized Recharts to render complex carbon data into intuitive and responsive charts.",
       "Performance Optimization: Integrated Redis for API rate limiting and efficient caching of leaderboard data.",
-      "Security Best Practices: Implemented robust authentication using JWT encryption and comprehensive input validation with Joi.",
-      "Interactive Visualization: Utilized Recharts to render complex carbon footprint data into intuitive and responsive charts."
+      "Security Best Practices: Implemented robust authentication using JWT encryption and comprehensive input validation with Joi."
     ],
     lessonsLearned: [
       "Gamification Logic: Designing balanced challenge and point systems to keep users motivated.",
@@ -328,16 +329,17 @@ export const PROJECTS: Project[] = [
       "It provides real-time notifications and smooth social interactions."
     ],
     features: [
-      "AI-Guard Safety: Automated content moderation that keeps the community positive and healthy",
-      "Instant Engagement: Never miss a beat with real-time updates on activity and interactions",
-      "Easy Social Access: Secure and quick login using your favorite social media accounts",
-      "Seamless Interface: A lightning-fast, modern feed experience that makes social interaction effortless"
+      "Social Connections: Secure login via Google or Discord with personalized user profiles",
+      "Dynamic Social Feed: Browse community content sorted by what's new, hot, or trending",
+      "AI Writing Buddy: Get intelligent title suggestions to make your posts more engaging",
+      "Automated Safety: AI-powered moderation that keeps the community safe from inappropriate content"
     ],
     techImplementation: [
       "Modern Monolithic Architecture: Built with Django following the MVT pattern, served via Gunicorn and Nginx on AWS EC2.",
-      "Dynamic Interactivity: Leveraged HTMX and Alpine.js to deliver SPA-like user experiences and real-time features without the complexity of a separate frontend app.",
+      "Interactive UI: Leveraged HTMX and Alpine.js to deliver SPA-like experiences and real-time features without a separate frontend app.",
+      "Unified Authentication: Implemented flexible social login and standard auth using the `django-allauth` ecosystem.",
       "Cloud Infrastructure: Automated deployment using GitHub Actions CI/CD to AWS EC2, with static files managed via AWS S3.",
-      "AI-Powered Operations: Integrated DeepSeek API for automated content toxicity detection and intelligent post writing assistance."
+      "AI-Powered Operations: Integrated DeepSeek API for automated content toxicity detection and intelligent content assistance."
     ],
     lessonsLearned: [
       "HTMX Integration: Learned how to build dynamic interfaces server-side, reducing JS bloat.",
@@ -374,16 +376,16 @@ export const PROJECTS: Project[] = [
       "Input your idea, and our team of intelligent agents (The Visionary, Market Analyst, Critic, Planner) collaborate to craft a comprehensive strategic report."
     ],
     features: [
-      "AI Board of Directors: Get professional strategy analysis from multiple AI 'experts' who collaborate on your idea",
-      "Transparent AI Reasoning: Watch the agents' thought process in real-time as they research and debate your plan",
-      "Deep Context Memory: The AI remembers your project's history and uses it to provide smarter future advice",
-      "Real-World News & Trends: Strategies are grounded in up-to-the-minute market data and live web research",
-      "Interactive Strategy Q&A: Deep-dive into your report by chatting with an AI that knows your business inside out"
+      "AI Board of Directors: A team of specialized agents that analyze your idea from multiple strategic angles",
+      "Live Strategy Sessions: Watch the AI agents debate and refine your business plan in real-time",
+      "Internet-Grounded Insights: Strategies based on real-time market data directly from the web",
+      "Expert Q&A: Deep dive into your report with an AI agent that knows your strategy inside out"
     ],
     techImplementation: [
       "Multi-Agent Orchestration: Designed a CrewAI workflow where specialized agents (Visionary, Analyst, Critic) collaborate to produce comprehensive strategies.",
       "Retrieval-Augmented Generation (RAG): Integrated Tavily Search API to ground agent outputs in real-time market data, ensuring relevance and accuracy.",
-      "Asynchronous Streaming: Implemented FastAPI StreamingResponse with Python generators to stream agent thoughts in real-time to the client."
+      "Asynchronous Streaming: Implemented FastAPI StreamingResponse with Python generators to stream agent thoughts in real-time to the client.",
+      "Professional Export: Developed a PDF generation engine using WeasyPrint for high-quality report layout."
     ],
     lessonsLearned: [
       "Serverless Timeouts: Solved 'Connection Reset' errors on Railway by implementing a Keep-Alive Streaming pattern for long-running AI tasks.",
@@ -416,16 +418,16 @@ export const PROJECTS: Project[] = [
       "It analyzes Job Descriptions and batches of CVs simultaneously, providing match scores, highlights, and deep analysis."
     ],
     features: [
-      "Smart Candidate Ranking: Instant suitablity analysis that highlights the best talent based on skill depth, not just keywords",
-      "Mass Resume Processing: Upload hundreds of CVs at once and get a complete analysis in minutes",
-      "Global Talent Support: Automatically detects and accurately screens resumes in both English and Indonesian",
-      "Professional Insights Export: Generate detailed, boardroom-ready Excel reports for easy sharing with the hiring team"
+      "Intelligent Match Scoring: Automatically rank candidates based on their suitability for the role",
+      "Efficiency at Scale: Process dozens of CVs simultaneously with a single upload",
+      "Global Language Support: Seamlessly handles CVs in both Indonesian and English",
+      "One-Click Professional Reports: Instant export of candidate rankings and insights to Excel"
     ],
     techImplementation: [
-      "Backend Architecture: Developed a Python Flask application to serve as the core processing engine for recruitment documents.",
-      "Document Processing: Implemented PyMuPDF for precise PDF text extraction to handle various CV formats.",
-      "AI Integration: Integrated DeepSeek-V3 API to perform semantic analysis and matching between CVs and Job Descriptions.",
-      "Report Generation: Utilized Pandas and Openpyxl to process analysis results and generate downloadable Excel reports."
+      "Backend Engine: Developed a Python Flask core processing engine for high-performance recruitment workflows.",
+      "High-Precision Parsing: Implemented PyMuPDF for robust PDF text extraction across diverse CV layouts.",
+      "Semantic Analysis Pipeline: Integrated DeepSeek-V3 API for intelligent matching between CVs and Job Descriptions.",
+      "Structured Data Export: Utilized Pandas and Openpyxl to generate well-formatted professional Excel reports."
     ],
     lessonsLearned: [
       "PDF Extraction: Handling various CV formats and layouts to ensure accurate text retrieval.",
@@ -451,16 +453,16 @@ export const PROJECTS: Project[] = [
       "It uses a trained CNN model to analyze images and provide results with high accuracy."
     ],
     features: [
-      "Instant Skin Analysis: Snap a photo and get an immediate classification of your acne type",
-      "Professional-Grade Accuracy: High-performance AI tuned for reliable and precise skin condition detection",
-      "Lightning-Fast Results: Built for speed, providing deep analysis in seconds right on your mobile device",
-      "Personalized Recommendations: AI-based recommendations for skincare products based on acne type"
+      "Instant Skin Analysis: Deep learning technology for rapid acne detection from facial images",
+      "Skincare Copilot: Personalized product recommendations tailored to your specific acne type",
+      "Clinical Precision: High-accuracy model results providing reliable insights for skin health",
+      "Accessibility: Easy-to-use mobile interface for immediate self-diagnosis anywhere"
     ],
     techImplementation: [
-      "Model Architecture: Trained an EfficientNetB0 Convolutional Neural Network (CNN) using TensorFlow with Transfer Learning for high-accuracy detection.",
-      "Model Optimization: Achieved 98% F1-score through rigorous training and tuning, and converted the model to TensorFlow Lite for edge usage.",
-      "Cloud Serving: Dockerized the Flask API and deployed it to Google Cloud Platform (Cloud Run) for scalable serverless inference.",
-      "Mobile Integration: Exposed RESTful APIs to communicate with the Android mobile application for real-time analysis."
+      "Model Architecture: Trained an EfficientNetB0 Convolutional Neural Network (CNN) using TensorFlow with Transfer Learning for optimal feature extraction.",
+      "Performance Optimization: Achieved 98% F1-score through rigorous tuning and converted the model to TFLite for mobile edge inference.",
+      "Cloud Infrastructure: Containerized the inference engine as a Docker image and deployed to GCP Cloud Run for scalable serverless scaling.",
+      "API Integration: Developed high-performance RESTful endpoints using Flask to bridge the Android client and the ML model."
     ],
     lessonsLearned: [
       "Model Tuning: Techniques to achieve high accuracy on medical imaging data.",
@@ -481,10 +483,10 @@ export const PROJECTS: Project[] = [
 
 export const TIMELINE: TimelineItem[] = [
   {
-    title: "React & Backend with AI",
+    title: "React & Backend with AI (Best Graduate)",
     subtitle: "Asah 2025",
     date: "Aug 2025 - Jan 2026",
-    description: "Advanced program led by Dicoding Association with Accenture. focused on full-stack development and AI integration."
+    description: "Advanced program led by Dicoding Association with Accenture. awarded Best Graduate for outstanding performance in full-stack development and AI integration."
   },
   {
     title: "Software Engineer Intern",
@@ -519,6 +521,8 @@ export const TIMELINE: TimelineItem[] = [
 ];
 
 export const CERTIFICATIONS: Certification[] = [
+  { name: "Best Graduate - React & Backend with AI (Asah 2025)", link: "https://drive.google.com/file/d/10nzjwFSTXsAIFHRnnhnRNTDIKC4tXcg2/view?usp=drive_link" },
+  { name: "Machine Learning (Bangkit Academy 2024)", link: "https://drive.google.com/file/d/1SrlFmqgBB3hg02-UV7BlvbFD9rhTKHME/view?usp=drive_link" },
   { name: "Machine Learning by Stanford University & DeepLearning.AI", link: "https://coursera.org/share/e82eef785a5024cadef3e2848d06f599" },
   { name: "DeepLearning.AI Tensorflow Developer", link: "https://coursera.org/share/3ad716fbe35350d7d71072ade73e61d1" },
   { name: "Tensorflow: Data & Deployment", link: "https://coursera.org/share/f08cf568b70691eeb9cbe231c04bb385" },
